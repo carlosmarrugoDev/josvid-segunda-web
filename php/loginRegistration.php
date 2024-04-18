@@ -5,6 +5,7 @@ include 'database.php';
 $name = $_POST['name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
+$password_incraptado = hash('123',$password);
 
 $query = "INSERT INTO useraccount(name, email, password)
               VALUES('$name', '$email', '$password')";
