@@ -15,14 +15,14 @@ if ($ejecutar) {
     echo '
         <script>
             alert("Usuario Almacenado");
-            window.location = "../index.php"
+            window.location = "../index.html"
         </script>
     ';
 } else {
     echo '
     <script>
         alert("Error");
-        window.location = "../index.php"
+        window.location = "../index.html"
     </script>
     ';
 }
