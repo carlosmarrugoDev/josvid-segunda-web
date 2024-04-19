@@ -12,6 +12,7 @@
                 <script>
                     window.location = "../courses.html";
                 </script>
+                exit;
             ';
     } else {
         echo '
@@ -19,5 +20,6 @@
                 alert("No eres tu, Somos Nosotros!");
                 windows.location = "../login.html";
             </script>
+            exit;
         ';
     }
