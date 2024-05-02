@@ -36,4 +36,7 @@ if (mysqli_num_rows($result) > 0) {
 
 // Cerrar la conexión a la base de datos
 mysqli_close($conexion);
+<<<<<<< HEAD
 ?>
+=======
+>>>>>>> f9616343e79ed4243a5f9b8abaa8f219632b583d
