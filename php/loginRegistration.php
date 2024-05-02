@@ -1,18 +1,14 @@
 <?php
-
 include 'database.php';
 
 $name = $_POST['name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
-$password = hash('sha512',$password);
 
-$query = "INSERT INTO useraccount(name, email, password)
-              VALUES('$name', '$email', '$password')";
+$stmt = mysqli_prepare($conexion, "INSERT INTO useraccount (name, email, password) VALUES (?, ?, ?)");
+mysqli_stmt_bind_param($stmt, 'sss', $name, $email, $password);
+$ejecutar = mysqli_stmt_execute($stmt);
 
-$ejecutar = mysqli_query($conexion, $query);
-
-$verificar_correo = mysqli_query($conexion, "SELECT * FROM useraccount WHERE email =  '$email'");
 
 if ($ejecutar) {
     echo '
@@ -29,3 +25,5 @@ if ($ejecutar) {
     </script>
     ';
 }
+
+mysqli_close($conexion);
