@@ -29,8 +29,6 @@
 
 <body>
 
-
-
   <!-- Preloader Start -->
   <!-- Header Start -->
   <div class="header-area header-transparent">
@@ -146,39 +144,46 @@
                 </thead>
                 <tbody>
                   <?php
-                  $connection_obj = mysqli_connect("localhost", "root", "", "test");
+                  // Conectar a la base de datos (aquí debes ingresar tus propias credenciales)
+                  $servername = "localhost";
+                  $username = "root";
+                  $password = "";
+                  $dbname = "test";
 
-                  if (!$connection_obj) {
-                    echo "Error No: " . mysqli_connect_errno();
-                    echo "Error Description: " . mysqli_connect_error();
-                    exit;
+                  // Creating conexion
+                  $conn = new mysqli($servername, $username, $password, $dbname);
+
+                  // VVerifying conexion
+                  if ($conn->connect_error) {
+                    die("Conexión fallida: " . $conn->connect_error);
                   }
-                  // prepare the select query 
-                  $query = "SELECT * FROM usertem";
-                  // execute the select query 
-                  $result = mysqli_query($connection_obj, $query) or die(mysqli_error($connection_obj));
-                  // run the select query 
-                  while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
-                    echo '<tr>
-                              <td class="product-thumbnail">
-                                <img src= "' . $row['URLCouse'] . '" alt="Image" class="img-fluid" width="20%">
-                              </td>
-                              <td class="product-name">
-                                <h2 class="h5 text-black">' . $row['courseName'] . '</h2>
-                              </td>
-                              <td>' . $row['price'] . '</td>
-                              <td>$49.00</td>
-                              <td><a href="#" class="btn btn-black btn-sm">X</a></td>
-                            </tr>';
+
+                  // Verificar si se ha enviado el formulario
+                  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    // Obtener los datos del formulario
+                    $courseName = $_POST['courseName'];
+                    $price = $_POST['price'];
+                    $imageURL = $_POST['imageURL'];
+
+                    // Insertar los datos en la base de datos
+                    $sql = "INSERT INTO userCursos (courseName, price, imageURL) VALUES ('$courseName', '$price', '$imageURL')";
+
+                    if ($conn->query($sql) === TRUE) {
+                      echo "Curso adquirido exitosamente";
+                    } else {
+                      echo "Error: " . $sql . "<br>" . $conn->error;
+                    }
                   }
+
+                  // Cerrar la conexión
+                  $conn->close();
                   ?>
-
 
                 </tbody>
               </table>
             </div>
           </form>
-        </div>  
+        </div>
 
         <div class="row">
           <div class="col-md-6">
@@ -193,7 +198,7 @@
             <div class="row">
               <div class="col-md-12">
                 <label class="text-black h4" for="coupon">Cupón</label>
-                <p>Inserta el codigo de descuento, si tienes uno</p>
+                <p>Inserta el código de descuento, si tienes uno</p>
               </div>
               <div class="col-md-8 mb-3 mb-md-0">
                 <input type="text" class="form-control py-3" id="coupon" placeholder="Coupon Code">
@@ -301,18 +306,42 @@
                 <li><a href="#">Privacy Policy</a></li>
               </ul>
             </div>
-
           </div>
         </div>
-
       </div>
     </footer>
     <!-- End Footer Section -->
 
+  </main>
+  <!--? Hero End -->
+  <!-- JS here -->
+  <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+  <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <script src="assets/js/ajax-form.js"></script>
+  <script src="assets/js/waypoints.min.js"></script>
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/js/scrollIt.js"></script>
+  <script src="assets/js/jquery.scrollUp.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/nice-select.min.js"></script>
+  <script src="assets/js/jquery.slicknav.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/gijgo.min.js"></script>
 
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/tiny-slider.js"></script>
-    <script src="assets/js/custom.js"></script>
+  <!--contact js-->
+  <script src="assets/js/contact.js"></script>
+  <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+  <script src="assets/js/jquery.form.js"></script>
+  <script src="assets/js/jquery.validate.min.js"></script>
+  <script src="assets/js/mail-script.js"></script>
+
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
