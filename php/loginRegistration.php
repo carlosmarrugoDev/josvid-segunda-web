@@ -1,4 +1,16 @@
 <?php
+<<<<<<< HEAD
+include 'database.php';
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+$stmt = mysqli_prepare($conexion, "INSERT INTO useraccount (name, email, password) VALUES (?, ?, ?)");
+mysqli_stmt_bind_param($stmt, 'sss', $name, $email, $password);
+$ejecutar = mysqli_stmt_execute($stmt);
+
+=======
 include 'database.php'; // Incluir el archivo de configuración de la base de datos
 
 $name = $_POST['name'];
@@ -9,6 +21,7 @@ $password = $_POST['password']; // Contraseña en texto plano (NO RECOMENDADO)
 $stmt = mysqli_prepare($conexion, "INSERT INTO useraccount (name, email, password) VALUES (?, ?, ?)");
 mysqli_stmt_bind_param($stmt, 'sss', $name, $email, $password); // Insertar contraseña como texto plano
 $ejecutar = mysqli_stmt_execute($stmt);
+>>>>>>> f9616343e79ed4243a5f9b8abaa8f219632b583d
 
 if ($ejecutar) {
     // Registro exitoso, redirigir al usuario a la página de inicio de sesión
@@ -28,5 +41,8 @@ if ($ejecutar) {
     ';
 }
 
+<<<<<<< HEAD
+=======
 // Cerrar la conexión a la base de datos
+>>>>>>> f9616343e79ed4243a5f9b8abaa8f219632b583d
 mysqli_close($conexion);
