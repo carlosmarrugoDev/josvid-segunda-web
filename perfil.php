@@ -21,15 +21,10 @@ mysqli_stmt_execute($stmt);
 $resultado = mysqli_stmt_get_result($stmt);
 $usuario = mysqli_fetch_assoc($resultado);
 
-// Consulta para obtener los cursos comprados por el usuario
-$stmtCursos = mysqli_prepare($conexion, "SELECT * FROM usercourses WHERE idUsuario = ?");
-mysqli_stmt_bind_param($stmtCursos, 'i', $idUsuario);
-mysqli_stmt_execute($stmtCursos);
-$resultadoCursos = mysqli_stmt_get_result($stmtCursos);
-
 // Cerrar la conexión a la base de datos
 mysqli_close($conexion);
 ?>
+
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -223,7 +218,7 @@ mysqli_close($conexion);
                 <!-- Contenido principal -->
                 <div class="container">
                     <div class="card">
-                        <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+                        <img src="assets/img/icon/usuario.png" alt="Profile Picture" class="profile-picture">
                         <div class="user-data">
                             <p class="user-name"><?php echo $usuario['name']; ?></p>
                             <p class="user-email"><?php echo $usuario['email']; ?></p>
@@ -243,27 +238,7 @@ mysqli_close($conexion);
                     </div>
                 </div>
 
-                <!-- Sección para mostrar los cursos comprados -->
-                <div class="container">
-                    <h2>Cursos comprados por <?php echo $usuario['name']; ?></h2>
-                    <div class="cursos-comprados">
-                        <?php
-                        // Verificar si el usuario ha comprado cursos
-                        if (mysqli_num_rows($resultadoCursos) > 0) {
-                            // Mostrar los cursos comprados
-                            while ($curso = mysqli_fetch_assoc($resultadoCursos)) {
-                                echo "<div class='curso'>";
-                                echo "<h3>" . $curso['nombreCurso'] . "</h3>";
-                                echo "<p>Precio: $" . $curso['precio'] . "</p>";
-                                echo "<img src='" . $curso['imagen'] . "' alt='Imagen del curso'>";
-                                echo "</div>";
-                            }
-                        } else {
-                            echo "<p>No has comprado ningún curso aún.</p>";
-                        }
-                        ?>
-                    </div>
-                </div>
+
 
             </main>
 

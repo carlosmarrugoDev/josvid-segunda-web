@@ -32,4 +32,3 @@ if (isset($_POST['name'], $_POST['email'], $_POST['password'], $_POST['idcurso']
     }
 }
 mysqli_close($conexion);
-?>
