@@ -167,7 +167,7 @@
                     $imageURL = $_POST['imageURL'];
 
                     // Insertar los datos en la base de datos
-                    $sql = "INSERT INTO userCursos (courseName, price, imageURL) VALUES ('$courseName', '$price', '$imageURL')";
+                    $sql = "INSERT INTO usercourses (courseName, price, imageURL) VALUES ('$courseName', '$price', '$imageURL')";
 
                     if ($conn->query($sql) === TRUE) {
                       echo "Curso adquirido exitosamente";
