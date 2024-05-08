@@ -208,7 +208,7 @@ mysqli_close($conexion);
     </header>
     <main>
         <!--? slider Area Start-->
-        <section class="slider-area ">
+        <section class="backphoto">
             <!-- Single Slider -->
             <div class="single-slider slider-height d-flex align-items-center">
 
