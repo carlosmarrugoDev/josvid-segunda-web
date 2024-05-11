@@ -1,7 +1,6 @@
 <?php
 include 'database.php';
 
-// Verificar si los campos requeridos están presentes y no están vacíos
 if (isset($_POST['name'], $_POST['email'], $_POST['password'], $_POST['idcurso']) && !empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['idcurso'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -9,10 +8,8 @@ if (isset($_POST['name'], $_POST['email'], $_POST['password'], $_POST['idcurso']
     $idcurso = $_POST['idcurso'];
 
     // Preparar la consulta para insertar el usuario en la base de datos
-    $stmt = mysqli_prepare($conexion, "INSERT INTO useraccount (name, email, password) VALUES (?, ?, ?, ?) 
-    && INSERT INTO usercursos (idcurso) VALUES (?)");
-    mysqli_stmt_bind_param($stmt, 's', $idcurso);
-    mysqli_stmt_bind_param($stmt, 'sss', $name, $email, $password); // No hash de la contraseña
+    $stmt = mysqli_prepare($conexion, "INSERT INTO useraccount (name, email, password, idcurso) VALUES (?, ?, ?, ?)");
+    mysqli_stmt_bind_param($stmt, 'ssss', $name, $email, $password, $idcurso); // No hash de la contraseña
     $ejecutar = mysqli_stmt_execute($stmt);
 
     if ($ejecutar) {

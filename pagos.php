@@ -192,7 +192,7 @@ session_start();
                   $sql = "SELECT
                             `id`,
                             `Id_user`,
-                            `URLCouse`,
+                            `imageURL`,
                             `courseName`,
                             `price`,
                             `imageURL`
