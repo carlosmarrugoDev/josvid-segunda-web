@@ -22,7 +22,7 @@ if ($user) {
         $_SESSION['id'] = $user['id'];
 
         // Redirigir al usuario a la página principal
-        header("Location: ../index.html");
+        header("Location: ../index.php");
         exit;
     } else {
         // Contraseña incorrecta
