@@ -1,7 +1,6 @@
 <?php
 include 'database.php';
 
-// Verificar si los campos requeridos están presentes y no están vacíos
 if (isset($_POST['name'], $_POST['email'], $_POST['password'], $_POST['idcurso']) && !empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['idcurso'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];

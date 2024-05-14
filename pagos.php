@@ -52,29 +52,29 @@ session_start();
                 <div class="main-menu d-none d-lg-block">
                   <nav>
                     <ul id="navigation">
-                    <li class="active" ><a href="index.php">Home</a></li>
-                                        <li><a href="courses.php">Cursos</a></li>
-                                          <li><a href="about.php">Acerca</a></li>
-                                          <li><a href="#">Blog</a>
-                                              <ul class="submenu">
-                                                  <li><a href="blog.php">Blog</a></li>
-                                                  <li><a href="blog_details.php">Detalle del blog</a></li>
-                                                  <li><a href="elements.php">Elementos</a></li>
-                                              </ul>
-                                          </li>
-                                          <li><a href="contact.php">Contactanos</a></li>
-                                          <li><a href="pagos.php"><img src="images/icons.png"></a></li>
-                                          <li><a href="#">Perfil</a>
-                                            <ul class="submenu">
-                                                
-                                                <li><a href="perfil.php">Perfil</a></li>
-                                                <li><a href="#"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
-                                                <li><a href="#"><img src="assets/img/menu/setting.png" width="30px">Ajustes y privacidad</a></li>
-                                                <li><a href="#"><img src="assets/img/menu/help.png" width="30px">Ayuda y soporte</a></li>
-                                                <li><a href="php/cerrarSesion.php"><img src="assets/img/menu/logout.png" width="30px">Salir</a></li>
+                      <li class="active"><a href="index.php">Home</a></li>
+                      <li><a href="courses.php">Cursos</a></li>
+                      <li><a href="about.php">Acerca</a></li>
+                      <li><a href="#">Blog</a>
+                        <ul class="submenu">
+                          <li><a href="blog.php">Blog</a></li>
+                          <li><a href="blog_details.php">Detalle del blog</a></li>
+                          <li><a href="elements.php">Elementos</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="contact.php">Contactanos</a></li>
+                      <li><a href="pagos.php"><img src="images/icons.png"></a></li>
+                      <li><a href="#">Perfil</a>
+                        <ul class="submenu">
 
-                                            </ul>
-                                        </li>
+                          <li><a href="perfil.php">Perfil</a></li>
+                          <li><a href="#"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
+                          <li><a href="#"><img src="assets/img/menu/setting.png" width="30px">Ajustes y privacidad</a></li>
+                          <li><a href="#"><img src="assets/img/menu/help.png" width="30px">Ayuda y soporte</a></li>
+                          <li><a href="php/cerrarSesion.php"><img src="assets/img/menu/logout.png" width="30px">Salir</a></li>
+
+                        </ul>
+                      </li>
                       <!-- Button -->
                       <?php
                                           if (!isset($_SESSION['user'])) {
@@ -159,7 +159,7 @@ session_start();
                     <th class="product-thumbnail">Imagen</th>
                     <th class="product-name">Producto</th>
                     <th class="product-price">Precio</th>
-                    
+
                     <th class="product-remove">Eliminar</th>
                   </tr>
                 </thead>
@@ -187,7 +187,7 @@ session_start();
                     $imageURL = $_POST['imageURL'];
 
                     // Insertar los datos en la base de datos
-                    $sql = "INSERT INTO usercourses (Id_user,courseName, price, imageURL) VALUES ('".$_SESSION["id"]."','$courseName', '$price', '$imageURL')";
+                    $sql = "INSERT INTO usercourses (Id_user,courseName, price, imageURL) VALUES ('" . $_SESSION["id"] . "','$courseName', '$price', '$imageURL')";
 
                     if ($conn->query($sql) === TRUE) {
                       echo "Curso adquirido exitosamente";
@@ -198,23 +198,22 @@ session_start();
                   $sql = "SELECT
                             `id`,
                             `Id_user`,
-                            `URLCouse`,
+                            `imageURL`,
                             `courseName`,
                             `price`,
                             `imageURL`
-                          FROM `test`.`usercourses` where Id_user = '".$_SESSION["id"]."'";
+                          FROM `test`.`usercourses` where Id_user = '" . $_SESSION["id"] . "'";
                   $result = mysqli_query($conn, $sql);
 
                   $precio = 0;
-                  while($row = mysqli_fetch_assoc($result))
-                  {
-                      $id_i = $row['id'];
-                     
-                      echo '<tr><td class="product-thumbnail"><img src="./'.$row['imageURL'].'" alt="Image" height="auto" width="42"></td>';
-                      echo '<td class="product-thumbnail">'.$row['courseName'].'</td>';
-                      echo '<td class="product-thumbnail">'.$row['price'].'</td>';
-                      echo '<td class="product-thumbnail" align="center"><a href="eliminardeCarrito.php?id='.$id_i.'"><img src="assets/img/icon/eli.png" alt="Image" height="auto" width="20"></a></td></tr>';
-                      $precio = $precio + $row['price'];
+                  while ($row = mysqli_fetch_assoc($result)) {
+                    $id_i = $row['id'];
+
+                    echo '<tr><td class="product-thumbnail"><img src="./' . $row['imageURL'] . '" alt="Image" height="auto" width="42"></td>';
+                    echo '<td class="product-thumbnail">' . $row['courseName'] . '</td>';
+                    echo '<td class="product-thumbnail">' . $row['price'] . '</td>';
+                    echo '<td class="product-thumbnail" align="center"><a href="eliminardeCarrito.php?id=' . $id_i . '"><img src="assets/img/icon/eli.png" alt="Image" height="auto" width="20"></a></td></tr>';
+                    $precio = $precio + $row['price'];
                   }
                   // Cerrar la conexión
                   $conn->close();

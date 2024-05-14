@@ -6,6 +6,7 @@ include 'database.php';
 
 $email = $_POST['email'];
 $password = $_POST['password'];
+$idcurso = $_POST['idcurso'];
 
 // Consulta SQL para verificar las credenciales del usuario
 $stmt = mysqli_prepare($conexion, "SELECT * FROM useraccount WHERE email = ?");
@@ -20,6 +21,7 @@ if ($user) {
         // Iniciar sesión correctamente
         $_SESSION['user'] = $user['email'];
         $_SESSION['id'] = $user['id'];
+        $_SESSION['idcurso'] = $user['idcurso'];    
 
         // Redirigir al usuario a la página principal
         header("Location: ../index.php");
