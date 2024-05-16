@@ -8,20 +8,16 @@ if (empty($_SESSION['user'])) {
     exit;
 }
 
-// Incluir el archivo de configuración de la base de datos
 include 'php/database.php';
 
-// Obtener el ID del usuario de la sesión
 $idUsuario = $_SESSION['id'];
 
-// Consulta para obtener los datos del usuario
 $stmt = mysqli_prepare($conexion, "SELECT * FROM useraccount WHERE id = ?");
 mysqli_stmt_bind_param($stmt, 'i', $idUsuario);
 mysqli_stmt_execute($stmt);
 $resultado = mysqli_stmt_get_result($stmt);
 $usuario = mysqli_fetch_assoc($resultado);
 
-// Cerrar la conexión a la base de datos
 mysqli_close($conexion);
 ?>
 
