@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+<!---Ya hice commit-->
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -9,7 +13,7 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
-    <!-- CSS here -->
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/slicknav.css">
@@ -24,6 +28,7 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    
 </head>
 
 <body>
@@ -39,84 +44,87 @@
         </div>
     </div>
     <!-- Preloader Start -->
-    <!-- Header Start -->
-    <div class="header-area header-transparent">
-        <div class="main-header ">
-            <div class="header-bottom  header-sticky">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <!-- Logo -->
-                        <div class="col-xl-2 col-lg-2">
-                            <div class="logo">
-                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-10 col-lg-10">
-                            <div class="menu-wrapper d-flex align-items-center justify-content-end">
-                                <!-- Main-menu -->
-                                <div class="main-menu d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">                                                                                          
-                                            <li class="active" ><a href="index.php">Home</a></li>
-                                            <li><a href="courses.html">Cursos</a></li>
-                                            <li><a href="about.html">Acerca</a></li>
-                                            <li><a href="#">Blog</a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog_details.html">Detalle del blog</a></li>
-                                                    <li><a href="elements.html">Elementos</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contactanos</a></li>
-                                            <li><a href="pagos.php"><img src="images/icons.png"></a></li>
-                                            <li><a href="#">Perfil</a>
-                                                <ul class="submenu">
-                                                    
-                                                    <li><a href="perfil.php">Perfil</a></li>
-                                                    <li><a href="#"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
-                                                    <li><a href="#"><img src="assets/img/menu/setting.png" width="30px">Ajustes y privacidad</a></li>
-                                                    <li><a href="#"><img src="assets/img/menu/help.png" width="30px">Ayuda y soporte</a></li>
-                                                    <li><a href="php/cerrarSesion.php"><img src="assets/img/menu/logout.png" width="30px">Salir</a></li>
-    
-                                                </ul>
-                                            </li>
-                                            <!-- Button -->
-                                            <li class="button-header margin-left "><a href="register.html" class="btn">únete</a></li>
-                                            <li class="button-header"><a href="login.html" class="btn btn3">Iniciar sesión</a></li>
-                                        </ul>
-                                    </nav>
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
                                 </div>
                             </div>
-                        </div> 
-                        <!-- Mobile Menu -->
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
+                            <div class="col-xl-10 col-lg-10">
+                                <div class="menu-wrapper d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <?php
+                                    if (!isset($_SESSION['user'])) {
+                                        ?>
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">                                                                                          
+                                                <li class="active" ><a href="index.html">Home</a></li>
+                                        <li><a href="courses.html">Cursos</a></li>
+                                          <li><a href="about.html">Acerca</a></li>
+                                          <li><a href="#">Blog</a>
+                                              <ul class="submenu">
+                                                  <li><a href="blog.html">Blog</a></li>
+                                                  <li><a href="blog_details.html">Detalle del blog</a></li>
+                                                  <li><a href="elements.html">Elementos</a></li>
+                                              </ul>
+                                          <li><a href="contact.html">Contactanos</a></li>
+                                          <li><a href="pagos.php"><img src="images/icons.png"></a></li>
+                                          <li><a href="#">Perfil</a>
+                                            <ul class="submenu">
+                                                
+                                                <li><a href="perfil.php">Perfil</a></li>
+                                                <li><a href="#"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
+                                                <li><a href="#"><img src="assets/img/menu/setting.png" width="30px">Ajustes y privacidad</a></li>
+                                                <li><a href="#"><img src="assets/img/menu/help.png" width="30px">Ayuda y soporte</a></li>
+                                                <li><a href="php/cerrarSesion.php"><img src="assets/img/menu/logout.png" width="30px">Salir</a></li>
+
+                                            </ul>
+                                        </li>
+                                          <!-- Button -->
+                                          <li class="button-header margin-left "><a href="register.html" class="btn">únete</a></li>
+                                          <li class="button-header"><a href="login.html" class="btn btn3">Iniciar sesión</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <?php
+                                       }
+                                    ?>
+                                </div>
+                            </div> 
+                            <div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Header End -->
+        <!-- Header End -->
+    </header>
     <main>
         <!--? slider Area Start-->
-        <section class="slider-area slider-area2">
+        <section class="slider-area ">
             <div class="slider-active">
                 <!-- Single Slider -->
-                <div class="single-slider slider-height2">
+                <div class="single-slider slider-height d-flex align-items-center">
                     <div class="container">
                         <div class="row">
-                            <div class="col-xl-8 col-lg-11 col-md-12">
-                                <div class="hero__caption hero__caption2">
-                                    <h1 data-animation="bounceIn" data-delay="0.2s">Acerca de nosotros</h1>
-                                    <!-- breadcrumb Start-->
-                                    <nav aria-label="breadcrumb">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                            <li class="breadcrumb-item"><a>Acerca</a></li> 
-                                        </ol>
-                                    </nav>
-                                    <!-- breadcrumb End -->
+                            <div class="col-xl-6 col-lg-7 col-md-12">
+                                <div class="hero__caption">
+                                    <h1 data-animation="fadeInLeft" data-delay="0.2s">Promoción Black Friday</h1>
+                                    <p data-animation="fadeInLeft" data-delay="0.4s">Desarrolle habilidades con cursos, certificados y títulos <br>en línea de universidades y empresas de primer nivel</p>
+                                    <a href="register.html" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Únete gratis</a>
                                 </div>
                             </div>
                         </div>
@@ -124,7 +132,8 @@
                 </div>
             </div>
         </section>
-        <div class="services-area services-area2 section-padding40">
+        <!-- ? services-area -->
+        <div class="services-area">
             <div class="container">
                 <div class="row justify-content-sm-center">
                     <div class="col-lg-4 col-md-6 col-sm-8">
@@ -163,6 +172,150 @@
                 </div>
             </div>
         </div>
+        <!-- Courses area start -->
+        <div class="courses-area section-padding40 fix">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="section-tittle text-center mb-55">
+                            <h2>Nuestos cursos destacados</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="courses-actives">
+                    <!-- Single -->
+                    <div class="properties pb-20">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a href="#"><img src="assets/img/gallery/Busqueda Binaria ED.png" alt=""></a>
+                            </div>
+                            <div class="properties__caption">
+                                <p>Ing. Carlos Marrugo</p>
+                                    <h3><a href="#">Estructura de Datos - Busqueda Binaria</a></h3>
+                                    <p>Este curso se enfoca en explorar en detalle la búsqueda binaria y su aplicación en diversas estructuras de datos.
+                                    </p>
+                                    <div class="properties__footer d-flex justify-content-between align-items-center">
+                                        <div class="restaurant-name">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half"></i>
+                                            </div>
+                                            <p><span>(4.5)</span> basado en 120</p>
+                                        </div>
+                                        <div class="price">
+                                            <span>$135</span>
+                                        </div>
+                                    </div>
+                                    <a href="courses.html" class="border-btn border-btn2">Adquirir</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Single -->
+                    <!-- Single -->
+                    <div class="properties pb-20">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a href="#"><img src="assets/img/gallery/Git Github miniatura.png" alt=""></a>
+                            </div>
+                            <div class="properties__caption">
+                                <p>Ing Carlos Marrugo</p>
+                                    <h3><a href="#">Git - Terminal - VSC / Github</a></h3>
+                                    <p>En este curso intensivo de Git y GitHub, aprenderás las habilidades fundamentales para gestionar eficazmente el control de versiones de tus proyectos y colaborar de manera eficiente en equipos de desarrollo de software. 
+                                        
+                                    </p>
+                                    <div class="properties__footer d-flex justify-content-between align-items-center">
+                                        <div class="restaurant-name">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half"></i>
+                                            </div>
+                                            <p><span>(4.5)</span> basado en 120</p>
+                                        </div>
+                                        <div class="price">
+                                            <span>$135</span>
+                                        </div>
+                                    </div>
+                                    <a href="courses.html" class="border-btn border-btn2">Adquirir</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single -->
+                    <!-- Single -->
+                    <div class="properties pb-20">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a href="#"><img src="assets/img/gallery/Notion Miniatura.png" alt=""></a>
+                            </div>
+                            <div class="properties__caption">
+                                <p>Inge. Carlos Marrugo</p>
+                                    <h3><a href="#">Organizarme Como Programador</a></h3>
+                                    <p>Este curso está diseñado para ayudarte a desarrollar habilidades efectivas de organización y gestión del tiempo, específicamente adaptadas para programadores.
+                                        
+                                    </p>
+                                    <div class="properties__footer d-flex justify-content-between align-items-center">
+                                        <div class="restaurant-name">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half"></i>
+                                            </div>
+                                            <p><span>(4.5)</span> basado en 120</p>
+                                        </div>
+                                        <div class="price">
+                                            <span>$135</span>
+                                        </div>
+                                    </div>
+                                    <a href="courses.html" class="border-btn border-btn2">Adquirir</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Single -->
+                    <!-- Single -->
+                    <div class="properties pb-20">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a href="#"><img src="assets/img/gallery/Busqueda Binaria ED.png" alt=""></a>
+                            </div>
+                            <div class="properties__caption">
+                                <p>Ing. Carlos Marrugo</p>
+                                    <h3><a href="#">Estructura de Datos - Busqueda Binaria</a></h3>
+                                    <p>Este curso se enfoca en explorar en detalle la búsqueda binaria y su aplicación en diversas estructuras de datos.
+                                    </p>
+                                    <div class="properties__footer d-flex justify-content-between align-items-center">
+                                        <div class="restaurant-name">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half"></i>
+                                            </div>
+                                            <p><span>(4.5)</span> basado en 120</p>
+                                        </div>
+                                        <div class="price">
+                                            <span>$135</span>
+                                        </div>
+                                    </div>
+                                    <a href="courses.html" class="border-btn border-btn2">Adquirir</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Single -->
+                </div>
+            </div>
+        </div>
+        <!-- Courses area End -->
         <!--? About Area-1 Start -->
         <section class="about-area1 fix pt-10">
             <div class="support-wrapper align-items-center">
@@ -212,7 +365,7 @@
                         <img src="assets/img/gallery/about.png" alt="">
 
                         <div class="video-icon" >
-                            <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0"><i class="fas fa-play"></i></a>
+                            <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=Rfd9fMj92H0"><i class="fas fa-play"></i></a>
                         </div>
                     </div>
                 </div>
@@ -236,7 +389,7 @@
                                 <img src="assets/img/gallery/topic1.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
-                                        <h3><a href="#">Programación</a></h3>
+                                        <h3><a href="#">Estructura de Datos - Busqueda Binaria</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -258,66 +411,6 @@
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
                                 <img src="assets/img/gallery/topic3.png" alt="">
-                                <div class="topic-content-box">
-                                    <div class="topic-content">
-                                        <h3><a href="#">Programación</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-topic text-center mb-30">
-                            <div class="topic-img">
-                                <img src="assets/img/gallery/topic4.png" alt="">
-                                <div class="topic-content-box">
-                                    <div class="topic-content">
-                                        <h3><a href="#">Programación</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-topic text-center mb-30">
-                            <div class="topic-img">
-                                <img src="assets/img/gallery/topic5.png" alt="">
-                                <div class="topic-content-box">
-                                    <div class="topic-content">
-                                        <h3><a href="#">Programación</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-topic text-center mb-30">
-                            <div class="topic-img">
-                                <img src="assets/img/gallery/topic6.png" alt="">
-                                <div class="topic-content-box">
-                                    <div class="topic-content">
-                                        <h3><a href="#">Programación</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-topic text-center mb-30">
-                            <div class="topic-img">
-                                <img src="assets/img/gallery/topic7.png" alt="">
-                                <div class="topic-content-box">
-                                    <div class="topic-content">
-                                        <h3><a href="#">Programación</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-topic text-center mb-30">
-                            <div class="topic-img">
-                                <img src="assets/img/gallery/topic8.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programación</a></h3>
@@ -444,6 +537,31 @@
             </div>
         </section>
         <!-- Services End -->
+        <!--? About Area-2 Start -->
+        <section class="about-area2 fix pb-padding">
+            <div class="support-wrapper align-items-center">
+                <div class="right-content2">
+                    <!-- img -->
+                    <div class="right-img">
+                        <img src="assets/img/gallery/about2.png" alt="">
+                    </div>
+                </div>
+                <div class="left-content2">
+                    <!-- section tittle -->
+                    <div class="section-tittle section-tittle2 mb-20">
+                        <div class="front-text">
+                            <h2 class="">Da el siguiente paso
+                                hacia tu personal
+                                y objetivos profesionales
+                            con nosotros.</h2>
+                            <p>Únte para que puedas descubir más acerca del mundo de la programación</p>
+                            <a href="register.html" class="btn">Únete gratis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Area End -->
     </main>
     <footer>
      <div class="footer-wrappper footer-bg">
@@ -472,7 +590,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
                                 <h4>Soporte</h4>
@@ -503,7 +621,6 @@
 </div>
 
 <!-- JS here -->
-
 <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 <!-- Jquery, Popper, Bootstrap -->
 <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>

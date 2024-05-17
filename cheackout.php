@@ -5,6 +5,9 @@
 * Template URI: https://untree.co/
 * License: https://creativecommons.org/licenses/by/3.0/
 */ -->
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 	<head>
@@ -56,19 +59,19 @@
 									<div class="main-menu d-none d-lg-block">
 										<nav>
 											<ul id="navigation">                                                                                          
-												<li class="active" ><a href="index.php">Home</a></li>
-                                          <li><a href="courses.html">Cursos</a></li>
-                                          <li><a href="about.html">Acerca</a></li>
+                                            <li class="active" ><a href="index.php">Home</a></li>
+                                        <li><a href="courses.php">Cursos</a></li>
+                                          <li><a href="about.php">Acerca</a></li>
                                           <li><a href="#">Blog</a>
                                               <ul class="submenu">
-                                                  <li><a href="blog.html">Blog</a></li>
-                                                  <li><a href="blog_details.html">Detalle del blog</a></li>
-                                                  <li><a href="elements.html">Elementos</a></li>
+                                                  <li><a href="blog.php">Blog</a></li>
+                                                  <li><a href="blog_details.php">Detalle del blog</a></li>
+                                                  <li><a href="elements.php">Elementos</a></li>
                                               </ul>
                                           </li>
-                                          <li><a href="contact.html">Contactanos</a></li>
+                                          <li><a href="contact.php">Contactanos</a></li>
                                           <li><a href="pagos.php"><img src="images/icons.png"></a></li>
-										  <li><a href="#">Perfil</a>
+                                          <li><a href="#">Perfil</a>
                                             <ul class="submenu">
                                                 
                                                 <li><a href="perfil.php">Perfil</a></li>
@@ -80,8 +83,14 @@
                                             </ul>
                                         </li>
                                           <!-- Button -->
+                                          <?php
+                                          if (!isset($_SESSION['user'])) {
+                                            ?>
                                           <li class="button-header margin-left "><a href="register.html" class="btn">únete</a></li>
                                           <li class="button-header"><a href="login.html" class="btn btn3">Iniciar sesión</a></li>
+                                          <?php
+                                                }
+                                                ?>    
 											</ul>
 										</nav>
 									</div>
@@ -155,6 +164,20 @@
 		        <div class="col-md-6 mb-5 mb-md-0">
 		          <h2 class="h3 mb-3 text-black">Detalles de facturación</h2>
 		          <div class="p-3 p-lg-5 border bg-white">
+		            <div class="form-group">
+		              <label for="c_country" class="text-black">Pais<span class="text-danger">*</span></label>
+		              <select id="c_country" class="form-control">
+		                <option value="1">Selecciona un pais</option>    
+		                <option value="2">Bangladesh</option>    
+		                <option value="3">Algeria</option>    
+		                <option value="4">Afghanistan</option>    
+		                <option value="5">Ghana</option>    
+		                <option value="6">Albania</option>    
+		                <option value="7">Bahrain</option>    
+		                <option value="8">Colombia</option>    
+		                <option value="9">República dominicana</option>    
+		              </select>
+		            </div>
 		            <div class="form-group row">
 		              <div class="col-md-6">
 		                <label for="c_fname" class="text-black">Nombre<span class="text-danger">*</span></label>
@@ -165,8 +188,34 @@
 		                <input type="text" class="form-control" id="c_lname" name="c_lname">
 		              </div>
 		            </div>
+
+		            <div class="form-group row">
+		              <div class="col-md-12">
+		                <label for="c_companyname" class="text-black">Nombre de la compañia</label>
+		                <input type="text" class="form-control" id="c_companyname" name="c_companyname">
+		              </div>
+		            </div>
+
+		            <div class="form-group row">
+		              <div class="col-md-12">
+		                <label for="c_address" class="text-black">Dirección<span class="text-danger">*</span></label>
+		                <input type="text" class="form-control" id="c_address" name="c_address" placeholder="Street address">
+		              </div>
+		            </div>
+
 		            <div class="form-group mt-3">
 		              <input type="text" class="form-control" placeholder="Apartment, suite, unit etc. (optional)">
+		            </div>
+
+		            <div class="form-group row">
+		              <div class="col-md-6">
+		                <label for="c_state_country" class="text-black">Estado / Pais <span class="text-danger">*</span></label>
+		                <input type="text" class="form-control" id="c_state_country" name="c_state_country">
+		              </div>
+		              <div class="col-md-6">
+		                <label for="c_postal_zip" class="text-black">Posta / Zip <span class="text-danger">*</span></label>
+		                <input type="text" class="form-control" id="c_postal_zip" name="c_postal_zip">
+		              </div>
 		            </div>
 
 		            <div class="form-group row mb-5">

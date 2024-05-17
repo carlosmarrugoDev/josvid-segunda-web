@@ -52,17 +52,17 @@ session_start();
                 <div class="main-menu d-none d-lg-block">
                   <nav>
                     <ul id="navigation">
-                      <li class="active"><a href="index.html">Home</a></li>
-                      <li><a href="courses.html">Cursos</a></li>
-                      <li><a href="about.html">Acerca</a></li>
+                      <li class="active"><a href="index.php">Home</a></li>
+                      <li><a href="courses.php">Cursos</a></li>
+                      <li><a href="about.php">Acerca</a></li>
                       <li><a href="#">Blog</a>
                         <ul class="submenu">
-                          <li><a href="blog.html">Blog</a></li>
-                          <li><a href="blog_details.html">Detalle del blog</a></li>
-                          <li><a href="elements.html">Elementos</a></li>
+                          <li><a href="blog.php">Blog</a></li>
+                          <li><a href="blog_details.php">Detalle del blog</a></li>
+                          <li><a href="elements.php">Elementos</a></li>
                         </ul>
                       </li>
-                      <li><a href="contact.html">Contactanos</a></li>
+                      <li><a href="contact.php">Contactanos</a></li>
                       <li><a href="pagos.php"><img src="images/icons.png"></a></li>
                       <li><a href="#">Perfil</a>
                         <ul class="submenu">
@@ -76,8 +76,14 @@ session_start();
                         </ul>
                       </li>
                       <!-- Button -->
-                      <li class="button-header margin-left "><a href="register.html" class="btn">únete</a></li>
-                      <li class="button-header"><a href="login.html" class="btn btn3">Iniciar sesión</a></li>
+                      <?php
+                                          if (!isset($_SESSION['user'])) {
+                                            ?>
+                                          <li class="button-header margin-left "><a href="register.html" class="btn">únete</a></li>
+                                          <li class="button-header"><a href="login.html" class="btn btn3">Iniciar sesión</a></li>
+                                          <?php
+                                                }
+                                                ?>    
                     </ul>
                   </nav>
                 </div>
@@ -339,6 +345,7 @@ session_start();
   </main>
   <!--? Hero End -->
   <!-- JS here -->
+  
   <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
   <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
   <script src="assets/js/popper.min.js"></script>

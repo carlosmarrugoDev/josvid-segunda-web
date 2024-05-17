@@ -24,7 +24,7 @@ if ($user) {
         $_SESSION['idcurso'] = $user['idcurso'];    
 
         // Redirigir al usuario a la página principal
-        header("Location: ../index.html");
+        header("Location: ../index.php");
         exit;
     } else {
         // Contraseña incorrecta
