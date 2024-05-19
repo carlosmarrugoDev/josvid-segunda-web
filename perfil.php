@@ -163,12 +163,6 @@ mysqli_close($conexion);
                                                 <li class="active"><a href="index.php">Home</a></li>
                                                 <li><a href="courses.php">Cursos</a></li>
                                                 <li><a href="about.php">Acerca</a></li>
-                                                <li><a href="#">Blog</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="blog.php">Blog</a></li>
-                                                        <li><a href="blog_details.php">Detalle del blog</a></li>
-                                                        <li><a href="elements.php">Elementos</a></li>
-                                                    </ul>
                                                 <li><a href="contact.php">Contactanos</a></li>
                                                 <li><a href="pagos.php"><img src="images/icons.png"></a></li>
                                                 <li><a href="#">Perfil</a>

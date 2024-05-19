@@ -57,13 +57,6 @@ session_start();
                                         <li class="active" ><a href="index.php">Home</a></li>
                                         <li><a href="courses.php">Cursos</a></li>
                                           <li><a href="about.php">Acerca</a></li>
-                                          <li><a href="#">Blog</a>
-                                              <ul class="submenu">
-                                                  <li><a href="blog.php">Blog</a></li>
-                                                  <li><a href="blog_details.php">Detalle del blog</a></li>
-                                                  <li><a href="elements.php">Elementos</a></li>
-                                              </ul>
-                                          </li>
                                           <li><a href="contact.php">Contactanos</a></li>
                                           <li><a href="pagos.php"><img src="images/icons.png"></a></li>
                                           <li><a href="#">Perfil</a>
@@ -204,24 +197,23 @@ session_start();
                     </form>
                 </div>
                 <div class="col-lg-3 offset-lg-1">
-                    <div class="media contact-info">
+                <div class="media contact-info">
                         <span class="contact-info__icon"><i class="ti-home"></i></span>
                         <div class="media-body">
-                            <h3>Buttonwood, California.</h3>
-                            <p>Rosemead, CA 91770</p>
+                            <h3>50, Cra. 50 #31, Cartagena de Indias, Bolívar</h3>
                         </div>
                     </div>
                     <div class="media contact-info">
                         <span class="contact-info__icon"><i class="ti-tablet"></i></span>
                         <div class="media-body">
-                            <h3>+1 253 565 2365</h3>
-                            <p>Lunes a Viernes de 9am a 6pm</p>
+                            <h3>56517180</h3>
+                            <p>Lunes a Viernes de 8am a 9pm</p>
                         </div>
                     </div>
                     <div class="media contact-info">
                         <span class="contact-info__icon"><i class="ti-email"></i></span>
                         <div class="media-body">
-                            <h3>support@colorlib.com</h3>
+                            <h3>unicolombo.edu.co</h3>
                             <p>¡Envíanos tu consulta en cualquier momento!</p>
                         </div>
                     </div>

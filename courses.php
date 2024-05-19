@@ -63,13 +63,6 @@ session_start();
                                         <li class="active" ><a href="index.php">Home</a></li>
                                         <li><a href="courses.php">Cursos</a></li>
                                           <li><a href="about.php">Acerca</a></li>
-                                          <li><a href="#">Blog</a>
-                                              <ul class="submenu">
-                                                  <li><a href="blog.php">Blog</a></li>
-                                                  <li><a href="blog_details.php">Detalle del blog</a></li>
-                                                  <li><a href="elements.php">Elementos</a></li>
-                                              </ul>
-                                          </li>
                                           <li><a href="contact.php">Contactanos</a></li>
                                           <li><a href="pagos.php"><img src="images/icons.png"></a></li>
                                           <li><a href="#">Perfil</a>
@@ -375,18 +368,11 @@ session_start();
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-xl-7 col-lg-8">
-                        <div class="section-tittle text-center mt-40">
-                            <a href="#" class="border-btn">Cargar más</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <!-- Courses area End -->
         <!--? top subjects Area Start -->
-        <div class="topic-area">
+        <div class="topic-area section-padding40">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-lg-8">
@@ -402,7 +388,7 @@ session_start();
                                 <img src="assets/img/gallery/topic1.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
-                                        <h3><a href="#">Programación</a></h3>
+                                        <h3><a href="#">Estructura de Datos - Busqueda Binaria</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -414,7 +400,7 @@ session_start();
                                 <img src="assets/img/gallery/topic2.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
-                                        <h3><a href="#">Programación</a></h3>
+                                        <h3><a href="#">Git - Terminal - VSC / Github</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -426,57 +412,9 @@ session_start();
                                 <img src="assets/img/gallery/topic3.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
-                                        <h3><a href="#">Programación</a></h3>
+                                        <h3><a href="#">Organizarme como programador</a></h3>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-xl-12">
-                        <div class="section-tittle text-center mt-20">
-                            <a href="courses.html" class="border-btn">Ver más temas</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- top subjects End -->  
-        <!-- ? services-area -->
-        <div class="services-area services-area2 section-padding40">
-            <div class="container">
-                <div class="row justify-content-sm-center">
-                    <div class="col-lg-4 col-md-6 col-sm-8">
-                        <div class="single-services mb-30">
-                            <div class="features-icon">
-                                <img src="assets/img/icon/icon1.svg" alt="">
-                            </div>
-                            <div class="features-caption">
-                                <h3>60 años de experiencia en educación</h3>
-                                <p>Aprende y crea</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-8">
-                        <div class="single-services mb-30">
-                            <div class="features-icon">
-                                <img src="assets/img/icon/icon2.svg" alt="">
-                            </div>
-                            <div class="features-caption">
-                                <h3>Tutores expertos</h3>
-                                <p>El mejor equipo para la docencia</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-8">
-                        <div class="single-services mb-30">
-                            <div class="features-icon">
-                                <img src="assets/img/icon/icon3.svg" alt="">
-                            </div>
-                            <div class="features-caption">
-                                <h3>Educación a toda hora</h3>
-                                <p>Accede a los cursos a cualquier hora</p>
                             </div>
                         </div>
                     </div>

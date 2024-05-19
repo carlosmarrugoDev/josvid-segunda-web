@@ -68,13 +68,6 @@ session_start();
                                             <li class="active" ><a href="index.php">Home</a></li>
                                         <li><a href="courses.php">Cursos</a></li>
                                           <li><a href="about.php">Acerca</a></li>
-                                          <li><a href="#">Blog</a>
-                                              <ul class="submenu">
-                                                  <li><a href="blog.php">Blog</a></li>
-                                                  <li><a href="blog_details.php">Detalle del blog</a></li>
-                                                  <li><a href="elements.php">Elementos</a></li>
-                                              </ul>
-                                          </li>
                                           <li><a href="contact.php">Contactanos</a></li>
                                           <li><a href="pagos.php"><img src="images/icons.png"></a></li>
                                           <li><a href="#">Perfil</a>
@@ -324,55 +317,8 @@ session_start();
         <section class="about-area1 fix pt-10">
             <div class="support-wrapper align-items-center">
                 <div class="left-content1">
-                    <div class="about-icon">
-                        <img src="assets/img/icon/about.svg" alt="">
                     </div>
                     <!-- section tittle -->
-                    <div class="section-tittle section-tittle2 mb-55">
-                        <div class="front-text">
-                            <h2 class="">Aprende nuevas hablidades con nuestros docentes de manera Online</h2>
-                            <p>La cuales son =></p>
-                        </div>
-                    </div>
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Desarrollo de habilidades blandas como resolución de problemas, pensamiento crítico, creatividad 
-                                y habilidades de comunicación, que son fundamentales para tener éxito como programador.</p>
-                        </div>
-                    </div>
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Proporcionar a los estudiantes las habilidades necesarias para ingresar al mercado laboral 
-                                de la tecnología. </p>
-                        </div>
-                    </div>
-
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Ofrecer un ambiente de aprendizaje flexible donde los estudiantes puedan aprender a su propio 
-                                ritmo y adaptar su horario de estudio según sus necesidades. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="right-content1">
-                    <!-- img -->
-                    <div class="right-img">
-                        <img src="assets/img/gallery/about.png" alt="">
-
-                        <div class="video-icon" >
-                            <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=Rfd9fMj92H0"><i class="fas fa-play"></i></a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
         <!-- About Area End -->
@@ -405,7 +351,7 @@ session_start();
                                 <img src="assets/img/gallery/topic2.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
-                                        <h3><a href="#">Programación</a></h3>
+                                        <h3><a href="#">Git - Terminal - VSC / Github</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -417,17 +363,10 @@ session_start();
                                 <img src="assets/img/gallery/topic3.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
-                                        <h3><a href="#">Programación</a></h3>
+                                        <h3><a href="#">Organizarme como programador</a></h3>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-xl-12">
-                        <div class="section-tittle text-center mt-20">
-                            <a href="courses.html" class="border-btn">Ver más temas</a>
                         </div>
                     </div>
                 </div>
@@ -440,43 +379,10 @@ session_start();
                 <div class="right-content3">
                     <!-- img -->
                     <div class="right-img">
-                        <img src="assets/img/gallery/about3.png" alt="">
                     </div>
                 </div>
                 <div class="left-content3">
                     <!-- section tittle -->
-                    <div class="section-tittle section-tittle2 mb-20">
-                        <div class="front-text">
-                            <h2 class="">Habilidades que los estudiantes aprenderán</h2>
-                        </div>
-                    </div>
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Ser competente en al menos un lenguaje de programación, como Python, Java, JavaScript, C++, etc. 
-                                Esto incluye comprensión de sintaxis, estructuras de datos y algoritmos básicos.</p>
-                        </div>
-                    </div>
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Debe tener la capacidad de descomponer problemas complejos en partes más pequeñas y desarrollar 
-                                soluciones efectivas utilizando técnicas de programación.</p>
-                        </div>
-                    </div>
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Comprender conceptos fundamentales de la programación, como variables, tipos de datos, bucles, 
-                                condicionales, funciones, clases (en el contexto de lenguajes orientados a objetos), entre otros.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
