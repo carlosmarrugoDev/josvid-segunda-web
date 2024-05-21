@@ -112,7 +112,7 @@ session_start();
                                     <!-- breadcrumb Start-->
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                             <li class="breadcrumb-item"><a>Acerca</a></li> 
                                         </ol>
                                     </nav>
@@ -244,7 +244,7 @@ session_start();
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo mb-25">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="index.php"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
@@ -265,7 +265,7 @@ session_start();
                             <div class="footer-tittle">
                                 <h4>Soporte</h4>
                                 <ul>
-                                    <li><a href="contact.html">Contactanos= Línea telefónica ó Correo eletrónico</a></li>
+                                    <li><a href="contact.php">Contactanos= Línea telefónica ó Correo eletrónico</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -68,9 +68,7 @@ session_start();
                                             <ul class="submenu">
                                                 
                                                 <li><a href="perfil.php">Perfil</a></li>
-                                                <li><a href="#"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
-                                                <li><a href="#"><img src="assets/img/menu/setting.png" width="30px">Ajustes y privacidad</a></li>
-                                                <li><a href="#"><img src="assets/img/menu/help.png" width="30px">Ayuda y soporte</a></li>
+                                                <li><a href="editarperfil.php"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
                                                 <li><a href="php/cerrarSesion.php"><img src="assets/img/menu/logout.png" width="30px">Salir</a></li>
 
                                             </ul>
@@ -113,7 +111,7 @@ session_start();
 										<!-- breadcrumb Start-->
 										<nav aria-label="breadcrumb">
 											<ol class="breadcrumb">
-												<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+												<li class="breadcrumb-item"><a href="index.php">Home</a></li>
 												<li class="breadcrumb-item"><a href="#">Servicios</a></li> 
 											</ol><br>
 										</nav>
@@ -205,39 +203,22 @@ session_start();
 		                <label for="c_state_country" class="text-black">Estado / Pais <span class="text-danger">*</span></label>
 		                <input type="text" class="form-control" id="c_state_country" name="c_state_country">
 		              </div>
-		              <div class="col-md-6">
-		                <label for="c_postal_zip" class="text-black">Posta / Zip <span class="text-danger">*</span></label>
-		                <input type="text" class="form-control" id="c_postal_zip" name="c_postal_zip">
-		              </div>
-		            </div>
 
-		            <div class="form-group row mb-5">
-		              <div class="col-md-6">
+					  <div class="col-md-6">
 		                <label for="c_email_address" class="text-black">Correo electrónico<span class="text-danger">*</span></label>
 		                <input type="text" class="form-control" id="c_email_address" name="c_email_address">
 		              </div>
+		            </div>
+					
+		            <div class="form-group row mb-5">
 		              <div class="col-md-6">
 		                <label for="c_phone" class="text-black">Teléfono<span class="text-danger">*</span></label>
 		                <input type="text" class="form-control" id="c_phone" name="c_phone" placeholder="Phone Number">
 		              </div>
 		            </div>
 
-		            <div class="form-group">
-		              <label for="c_create_account" class="text-black" data-bs-toggle="collapse" href="#create_an_account" role="button" aria-expanded="false" aria-controls="create_an_account"><input type="checkbox" value="1" id="c_create_account"> Crear una cuenta?</label>
-		              <div class="collapse" id="create_an_account">
-		                <div class="py-2 mb-4">
-		                  <p class="mb-3">Cree una cuenta ingresando la información a continuación. Si es un cliente recurrente, inicie sesión en la parte superior de la página.</p>
-		                  <div class="form-group">
-		                    <label for="c_account_password" class="text-black">Contraseña de cuenta</label>
-		                    <input type="email" class="form-control" id="c_account_password" name="c_account_password" placeholder="">
-		                  </div>
-		                </div>
-		              </div>
-		            </div>
-
 
 		            <div class="form-group">
-		              <label for="c_ship_different_address" class="text-black" data-bs-toggle="collapse" href="#ship_different_address" role="button" aria-expanded="false" aria-controls="ship_different_address"><input type="checkbox" value="1" id="c_ship_different_address"> ¿Envia a una direccion diferente?</label>
 		              <div class="collapse" id="ship_different_address">
 		                <div class="py-2">
 
@@ -313,35 +294,13 @@ session_start();
 		              </div>
 		            </div>
 
-		            <div class="form-group">
-		              <label for="c_order_notes" class="text-black">Pedidos</label>
-		              <textarea name="c_order_notes" id="c_order_notes" cols="30" rows="5" class="form-control" placeholder="Write your notes here..."></textarea>
-		            </div>
-
 		          </div>
 		        </div>
 		        <div class="col-md-6">
 
 		          <div class="row mb-5">
 		            <div class="col-md-12">
-		              <h2 class="h3 mb-3 text-black">Código de descuento</h2>
-		              <div class="p-3 p-lg-5 border bg-white">
-
-		                <label for="c_code" class="text-black mb-3">Ingrese su código de cupón si tiene uno</label>
-		                <div class="input-group w-75 couponcode-wrap">
-		                  <input type="text" class="form-control me-2" id="c_code" placeholder="Coupon Code" aria-label="Coupon Code" aria-describedby="button-addon2">
-		                  <div class="input-group-append">
-		                    <button class="btn btn-black btn-sm" type="button" id="button-addon2">Aplicar</button>
-		                  </div>
-		                </div>
-
-		              </div>
-		            </div>
-		          </div>
-
-		          <div class="row mb-5">
-		            <div class="col-md-12">
-		              <h2 class="h3 mb-3 text-black">Tu orden</h2>
+					<h2 class="h3 mb-3 text-black">Tu orden</h2>
 		              <div class="p-3 p-lg-5 border bg-white">
 		                <table class="table site-block-order-table mb-5">
 		                  <thead>
@@ -349,25 +308,73 @@ session_start();
 		                    <th>Total</th>
 		                  </thead>
 		                  <tbody>
-		                    <tr>
-		                      <td>Top Up T-Shirt <strong class="mx-2">x</strong> 1</td>
-		                      <td>$250.00</td>
-		                    </tr>
-		                    <tr>
-		                      <td>Polo Shirt <strong class="mx-2">x</strong>   1</td>
-		                      <td>$100.00</td>
-		                    </tr>
-		                    <tr>
-		                      <td class="text-black font-weight-bold"><strong>Subtotal del carrito</strong></td>
-		                      <td class="text-black">$350.00</td>
-		                    </tr>
-		                    <tr>
-		                      <td class="text-black font-weight-bold"><strong>Orden Total</strong></td>
-		                      <td class="text-black font-weight-bold"><strong>$350.00</strong></td>
-		                    </tr>
+		                    <?php
+                  $servername = "localhost";
+                  $username = "root";
+                  $password = "";
+                  $dbname = "test";
+
+                  // Creating conexion
+                  $conn = new mysqli($servername, $username, $password, $dbname);
+
+                  // VVerifying conexion
+                  if ($conn->connect_error) {
+                    die("Conexión fallida: " . $conn->connect_error);
+                  }
+
+                  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $courseName = $_POST['courseName'];
+                    $price = $_POST['price'];
+                    $imageURL = $_POST['imageURL'];
+
+                    // Insertar los datos en la base de datos
+                    $sql = "INSERT INTO usercourses (Id_user,courseName, price, imageURL) VALUES ('" . $_SESSION["id"] . "','$courseName', '$price', '$imageURL')";
+
+                    if ($conn->query($sql) === TRUE) {
+                      echo "Curso adquirido exitosamente";
+                    } else {
+                      echo "Error: " . $sql . "<br>" . $conn->error;
+                    }
+                  }
+                  $sql = "SELECT
+                            `id`,
+                            `Id_user`,
+                            `imageURL`,
+                            `courseName`,
+                            `price`,
+                            `imageURL`
+                          FROM `test`.`usercourses` where Id_user = '" . $_SESSION["id"] . "'";
+                  $result = mysqli_query($conn, $sql);
+
+                  $precio = 0;
+                  while ($row = mysqli_fetch_assoc($result)) {
+                    $id_i = $row['id'];
+
+                    echo '<td class="product-thumbnail">' . $row['courseName'] . '</td>';
+                    echo '<td class="product-thumbnail">' . $row['price'] . '</td>';
+                    echo '<td class="product-thumbnail" align="center"><a id=' . $id_i . '"><img src="assets/img/icon/check.png" alt="Image" height="auto" width="20"></a></td></tr>';
+                    $precio = $precio + $row['price'];
+                  }
+                  // Cerrar la conexión
+                  $conn->close();
+                  ?>
 		                  </tbody>
 		                </table>
+						<div class="row mb-5">
+                  <div class="col-md-6">
+                    <span class="text-black">Total</span>
+                  </div>
+                  <div class="col-md-6 text-right">
+                    <strong id="total" class="text-black">$<?php echo $precio ?></strong>
+                  </div>
+                </div>
 
+		              </div>
+		            </div>
+		          </div>
+
+		          <div class="row mb-5">
+		            <div class="col-md-12">
 		                <div class="border p-3 mb-3">
 		                  <h3 class="h6 mb-0"><a class="d-block" data-bs-toggle="collapse" href="#collapsebank" role="button" aria-expanded="false" aria-controls="collapsebank">Transferencia bancaria directa</a></h3>
 
@@ -399,7 +406,7 @@ session_start();
 		                </div>
 
 		                <div class="form-group">
-		                  <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='thankyou.html'">Realizar pedido</button>
+		                  <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='thankyou.php'">Realizar pedido</button>
 		                </div>
 
 		              </div>
@@ -438,8 +445,7 @@ session_start();
 
 						<div class="col-lg-6 text-center text-lg-end">
 							<ul class="list-unstyled d-inline-flex ms-auto">
-								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
-								<li><a href="#">Privacy Policy</a></li>
+								
 							</ul>
 						</div>
 
