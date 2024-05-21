@@ -55,7 +55,7 @@ session_start();
                                     <!-- Logo -->
                                     <div class="col-xl-2 col-lg-2">
                                         <div class="logo">
-                                            <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                            <a href="index.html"><img src="assets/img/logo/logoclass.png" width="150px"></a>
                                         </div>
                                     </div>
                                     <div class="col-xl-10 col-lg-10">
@@ -74,8 +74,6 @@ session_start();
                                                 
                                                 <li><a href="perfil.php">Perfil</a></li>
                                                 <li><a href="#"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
-                                                <li><a href="#"><img src="assets/img/menu/setting.png" width="30px">Ajustes y privacidad</a></li>
-                                                <li><a href="#"><img src="assets/img/menu/help.png" width="30px">Ayuda y soporte</a></li>
                                                 <li><a href="php/cerrarSesion.php"><img src="assets/img/menu/logout.png" width="30px">Salir</a></li>
 				
 															</ul>

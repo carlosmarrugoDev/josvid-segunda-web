@@ -51,7 +51,7 @@ session_start();
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
-                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                <a href="index.html"><img src="assets/img/logo/logoclass.png" width="120px"></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10">
@@ -432,7 +432,7 @@ session_start();
                                <div class="single-footer-caption mb-30">
                                    <!-- logo -->
                                    <div class="footer-logo mb-25">
-                                       <a href="index.php"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                       <a href="index.php"><img src="assets/img/logo/logoclass2.png" width="200px"></a>
                                    </div>
                                    <div class="footer-tittle">
                                        <div class="footer-pera">
