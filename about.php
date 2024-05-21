@@ -69,7 +69,7 @@ session_start();
                                             <ul class="submenu">
                                                 
                                                 <li><a href="perfil.php">Perfil</a></li>
-                                                <li><a href="#"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
+                                                <li><a href="editarperfil.php"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
                                                 <li><a href="php/cerrarSesion.php"><img src="assets/img/menu/logout.png" width="30px">Salir</a></li>
     
                                                 </ul>

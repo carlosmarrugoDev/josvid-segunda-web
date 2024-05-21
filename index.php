@@ -205,7 +205,7 @@ session_start();
                                             <span>$135</span>
                                         </div>
                                     </div>
-                                    <a href="courses.html" class="border-btn border-btn2">Adquirir</a>
+                                    <a href="coursesfree.php" class="border-btn border-btn2">Adquirir</a>
                             </div>
 
                         </div>
@@ -238,7 +238,7 @@ session_start();
                                             <span>$135</span>
                                         </div>
                                     </div>
-                                    <a href="courses.html" class="border-btn border-btn2">Adquirir</a>
+                                    <a href="coursesfree.php" class="border-btn border-btn2">Adquirir</a>
                             </div>
                         </div>
                     </div>
@@ -270,7 +270,7 @@ session_start();
                                             <span>$135</span>
                                         </div>
                                     </div>
-                                    <a href="courses.html" class="border-btn border-btn2">Adquirir</a>
+                                    <a href="coursesfree.php" class="border-btn border-btn2">Adquirir</a>
                             </div>
 
                         </div>
@@ -302,7 +302,7 @@ session_start();
                                             <span>$135</span>
                                         </div>
                                     </div>
-                                    <a href="courses.html" class="border-btn border-btn2">Adquirir</a>
+                                    <a href="coursesfree.php" class="border-btn border-btn2">Adquirir</a>
                             </div>
 
                         </div>
