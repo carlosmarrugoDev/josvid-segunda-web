@@ -69,7 +69,7 @@ session_start();
                                             <ul class="submenu">
                                                 
                                                 <li><a href="perfil.php">Perfil</a></li>
-                                                <li><a href="#"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
+                                                <li><a href="editarperfil.php"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
                                                 <li><a href="php/cerrarSesion.php"><img src="assets/img/menu/logout.png" width="30px">Salir</a></li>
 
                                             </ul>
@@ -112,7 +112,7 @@ session_start();
                                     <!-- breadcrumb Start-->
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                             <li class="breadcrumb-item"><a href="#">Servicios</a></li> 
                                         </ol>
                                     </nav>
@@ -452,7 +452,7 @@ session_start();
                                <div class="footer-tittle">
                                 <h4>Soporte</h4>
                                 <ul>
-                                    <li><a href="contact.html">Contactanos= Línea telefónica ó Correo eletrónico</a></li>
+                                    <li><a href="contact.php">Contactanos= Línea telefónica ó Correo eletrónico</a></li>
                                 </ul>
                             </div>
                         </div>

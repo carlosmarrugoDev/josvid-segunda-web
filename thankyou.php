@@ -110,7 +110,7 @@ session_start();
 										<!-- breadcrumb Start-->
 										<nav aria-label="breadcrumb">
 											<ol class="breadcrumb">
-												<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+												<li class="breadcrumb-item"><a href="index.php">Home</a></li>
 												<li class="breadcrumb-item"><a href="#">Servicios</a></li> 
 											</ol><br>
 										</nav>

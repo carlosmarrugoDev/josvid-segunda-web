@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -58,24 +61,29 @@
                                     <nav>
                                         <ul id="navigation">                                                                                          
                                             <li class="active" ><a href="index.php">Home</a></li>
-                                        <li><a href="courses.html">Cursos</a></li>
-                                          <li><a href="about.html">Acerca</a></li>
-                                          <li><a href="contact.html">Contactanos</a></li>
+                                        <li><a href="courses.php">Cursos</a></li>
+                                          <li><a href="about.php">Acerca</a></li>
+                                          <li><a href="contact.php">Contactanos</a></li>
                                           <li><a href="pagos.php"><img src="images/icons.png"></a></li>
                                           <li><a href="#">Perfil</a>
                                             <ul class="submenu">
                                                 
                                                 <li><a href="perfil.php">Perfil</a></li>
-                                                <li><a href="#"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
-                                                <li><a href="#"><img src="assets/img/menu/setting.png" width="30px">Ajustes y privacidad</a></li>
-                                                <li><a href="#"><img src="assets/img/menu/help.png" width="30px">Ayuda y soporte</a></li>
+                                                <li><a href="editarperfil.php"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
                                                 <li><a href="php/cerrarSesion.php"><img src="assets/img/menu/logout.png" width="30px">Salir</a></li>
 
                                             </ul>
                                         </li>
                                           <!-- Button -->
+                                          <!--validar si la variable de sesion existe-->
+                                          <?php
+                                          if (!isset($_SESSION['user'])) {
+                                            ?>
                                           <li class="button-header margin-left "><a href="register.html" class="btn">únete</a></li>
                                           <li class="button-header"><a href="login.html" class="btn btn3">Iniciar sesión</a></li>
+                                          <?php
+                                                }
+                                                ?>
                                         </ul>
                                     </nav>
                                 </div>
@@ -424,7 +432,7 @@
                                <div class="single-footer-caption mb-30">
                                    <!-- logo -->
                                    <div class="footer-logo mb-25">
-                                       <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                       <a href="index.php"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
                                    </div>
                                    <div class="footer-tittle">
                                        <div class="footer-pera">
@@ -445,7 +453,7 @@
                                <div class="footer-tittle">
                                 <h4>Soporte</h4>
                                 <ul>
-                                    <li><a href="contact.html">Contactanos= Línea telefónica ó Correo eletrónico</a></li>
+                                    <li><a href="contact.php">Contactanos= Línea telefónica ó Correo eletrónico</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -61,7 +61,7 @@ session_start();
                         <ul class="submenu">
 
                           <li><a href="perfil.php">Perfil</a></li>
-                          <li><a href="#"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
+                          <li><a href="editarperfil.php"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
                           <li><a href="php/cerrarSesion.php"><img src="assets/img/menu/logout.png" width="30px">Salir</a></li>
 
                         </ul>
@@ -104,7 +104,7 @@ session_start();
                   <!-- breadcrumb Start-->
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                      <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                       <li class="breadcrumb-item"><a href="#">Servicios</a></li>
                     </ol>
                   </nav>
@@ -217,22 +217,10 @@ session_start();
           <div class="col-md-6">
             <div class="row mb-5">
               <div class="col-md-6 mb-3 mb-md-0">
-                <button class="btn btn-black btn-sm btn-block">Actualización de compra</button>
+                <a href="pagos.php"><button class="btn btn-black btn-sm btn-block">Actualización de compra</button></a>
               </div>
               <div class="col-md-6">
-                <button class="btn btn-outline-black btn-sm btn-block">Continuar comprando</button>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <label class="text-black h4" for="coupon">Cupón</label>
-                <p>Inserta el código de descuento, si tienes uno</p>
-              </div>
-              <div class="col-md-8 mb-3 mb-md-0">
-                <input type="text" class="form-control py-3" id="coupon" placeholder="Coupon Code">
-              </div>
-              <div class="col-md-4">
-                <button class="btn btn-black">Aplicar cupón</button>
+                <a href="courses.php"><button class="btn btn-outline-black btn-sm btn-block">Continuar comprando</button></a>
               </div>
             </div>
           </div>
@@ -255,7 +243,7 @@ session_start();
 
                 <div class="row">
                   <div class="col-md-12">
-                    <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='cheackout.html'">Pasar por la caja</button>
+                    <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='cheackout.php'">Pasar por la caja</button>
                   </div>
                 </div>
               </div>
