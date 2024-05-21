@@ -74,14 +74,13 @@ session_start();
                                             <ul class="submenu">
                                                 
                                                 <li><a href="perfil.php">Perfil</a></li>
-                                                <li><a href="#"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
-                                                <li><a href="#"><img src="assets/img/menu/setting.png" width="30px">Ajustes y privacidad</a></li>
-                                                <li><a href="#"><img src="assets/img/menu/help.png" width="30px">Ayuda y soporte</a></li>
+                                                <li><a href="editarperfil.php"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
                                                 <li><a href="php/cerrarSesion.php"><img src="assets/img/menu/logout.png" width="30px">Salir</a></li>
 
                                             </ul>
                                         </li>
                                           <!-- Button -->
+                                          <!--validar si la variable de sesion existe-->
                                           <?php
                                           if (!isset($_SESSION['user'])) {
                                             ?>
@@ -450,25 +449,7 @@ session_start();
         <!--? About Area-2 Start -->
         <section class="about-area2 fix pb-padding">
             <div class="support-wrapper align-items-center">
-                <div class="right-content2">
-                    <!-- img -->
-                    <div class="right-img">
-                        <img src="assets/img/gallery/about2.png" alt="">
-                    </div>
-                </div>
-                <div class="left-content2">
-                    <!-- section tittle -->
-                    <div class="section-tittle section-tittle2 mb-20">
-                        <div class="front-text">
-                            <h2 class="">Da el siguiente paso
-                                hacia tu personal
-                                y objetivos profesionales
-                            con nosotros.</h2>
-                            <p>Únte para que puedas descubir más acerca del mundo de la programación</p>
-                            <a href="register.html" class="btn">Únete gratis</a>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </section>
         <!-- About Area End -->

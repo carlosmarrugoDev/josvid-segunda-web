@@ -58,6 +58,22 @@ mysqli_close($conexion);
             background-color: #f4f4f4;
         }
 
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #F37513;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .casc{
+            color:#fff;
+        }
+
         .container {
             display: flex;
             justify-content: space-around;
@@ -218,18 +234,29 @@ mysqli_close($conexion);
                     </div>
 
                     <div class="info-card">
-                        <div class="info-item">
-                            <span class="info-label">Nombre:</span> <?php echo $usuario['name']; ?>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Email:</span> <?php echo $usuario['email']; ?>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">ID Curso:</span> <?php echo $usuario['idcurso']; ?>
-                        </div>
+            <form action="act.php" method="post" class="casc">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="idcurso">ID del Curso:</label>
+                        <input type="number" class="form-control" id="idcurso" name="idcurso" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Actualizar Usuario</button>
+            </div>
+        </form>
+    </div>
                     </div>
                 </div>
-
 
 
             </main>
