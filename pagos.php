@@ -70,13 +70,13 @@ session_start();
                       </li>
                       <!-- Button -->
                       <?php
-                                          if (!isset($_SESSION['user'])) {
-                                            ?>
-                                          <li class="button-header margin-left "><a href="register.html" class="btn">únete</a></li>
-                                          <li class="button-header"><a href="login.html" class="btn btn3">Iniciar sesión</a></li>
-                                          <?php
-                                                }
-                                                ?>    
+                      if (!isset($_SESSION['user'])) {
+                      ?>
+                        <li class="button-header margin-left "><a href="register.html" class="btn">únete</a></li>
+                        <li class="button-header"><a href="login.html" class="btn btn3">Iniciar sesión</a></li>
+                      <?php
+                      }
+                      ?>
                     </ul>
                   </nav>
                 </div>
@@ -158,7 +158,6 @@ session_start();
                 </thead>
                 <tbody>
                   <?php
-                  // Conectar a la base de datos (aquí debes ingresar tus propias credenciales)
                   $servername = "localhost";
                   $username = "root";
                   $password = "";
@@ -172,9 +171,7 @@ session_start();
                     die("Conexión fallida: " . $conn->connect_error);
                   }
 
-                  // Verificar si se ha enviado el formulario
                   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    // Obtener los datos del formulario
                     $courseName = $_POST['courseName'];
                     $price = $_POST['price'];
                     $imageURL = $_POST['imageURL'];
@@ -290,7 +287,7 @@ session_start();
               <div class="border-top copyright">
                 <div class="row pt-4">
                   <div class="col-lg-6">
-                    
+
                   </div>
 
                   <div class="col-lg-6 text-center text-lg-end">
@@ -307,7 +304,7 @@ session_start();
   </main>
   <!--? Hero End -->
   <!-- JS here -->
-  
+
   <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
   <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
