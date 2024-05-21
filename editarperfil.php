@@ -70,8 +70,9 @@ mysqli_close($conexion);
             font-weight: bold;
             transition: background-color 0.3s;
         }
-        .casc{
-            color:#fff;
+
+        .casc {
+            color: #fff;
         }
 
         .container {
@@ -189,11 +190,11 @@ mysqli_close($conexion);
                                                     </ul>
                                                 </li>
                                                 <?php
-                                          if (!isset($_SESSION['user'])) {
-                                            ?>
-                                          <li class="button-header margin-left "><a href="register.html" class="btn">únete</a></li>
-                                          <li class="button-header"><a href="login.html" class="btn btn3">Iniciar sesión</a></li>
-                                          <?php
+                                                if (!isset($_SESSION['user'])) {
+                                                ?>
+                                                    <li class="button-header margin-left "><a href="register.html" class="btn">únete</a></li>
+                                                    <li class="button-header"><a href="login.html" class="btn btn3">Iniciar sesión</a></li>
+                                                <?php
                                                 }
                                                 ?>
                                             </ul>
@@ -234,28 +235,48 @@ mysqli_close($conexion);
                     </div>
 
                     <div class="info-card">
-            <form action="act.php" method="post" class="casc">
-                    <div class="form-group">
-                        <label for="name">Nombre:</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
+
+                        <?php
+                        //updating info
+                        if (isset($_POST['enviar'])) {
+                        } else {
+                            $id = $_GET['id'];
+                            $sql = "select * from useraccount where id = '" . $id . "'";
+                            $resultado = mysqli_query($conexion, $sql);
+
+                            $fila = mysqli_fetch_assoc($resultado);
+                            $name = $fila['name'];
+                            $email = $fila['email'];
+
+                            mysqli_close($conexion);
+                        ?>
+
+                            <form action="act.php" method="post" class="casc">
+                                <div class="form-group">
+                                    <label for="name">Nombre:</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Contraseña:</label>
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="idcurso">ID del Curso:</label>
+                                    <input type="number" class="form-control" id="idcurso" name="idcurso" required>
+                                </div>
+                                <button type="submit" class="btn btn-success" action="">Actualizar Usuario</button>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Contraseña:</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="idcurso">ID del Curso:</label>
-                        <input type="number" class="form-control" id="idcurso" name="idcurso" required>
-                    </div>
-                    <button type="submit" class="btn btn-success">Actualizar Usuario</button>
-            </div>
-        </form>
-    </div>
-                    </div>
+                    </form>
+                <?php
+                        }
+                ?>
+
+                </div>
+                </div>
                 </div>
 
 
