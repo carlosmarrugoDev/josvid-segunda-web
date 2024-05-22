@@ -239,16 +239,18 @@ mysqli_close($conexion);
                         <?php
                         //updating info
                         if (isset($_POST['enviar'])) {
+                            echo "Editar";
                         } else {
-                            $id = $_GET['id'];
+                           /* $id = $_GET['id'];
                             $sql = "select * from useraccount where id = '" . $id . "'";
+                            echo $sql;
                             $resultado = mysqli_query($conexion, $sql);
 
                             $fila = mysqli_fetch_assoc($resultado);
                             $name = $fila['name'];
                             $email = $fila['email'];
 
-                            mysqli_close($conexion);
+                            mysqli_close($conexion);*/
                         ?>
 
                             <form action="act.php" method="post" class="casc">

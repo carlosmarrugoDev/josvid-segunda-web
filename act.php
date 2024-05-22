@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -21,16 +22,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $idcurso = $_POST['idcurso'];
 
         // Preparar la consulta SQL
-        $sql = "UPDATE useraccount SET email=?, password=?, idcurso=? WHERE name=?";
-
+        $sql = "UPDATE useraccount SET email=?, password=?, idcurso=?, name=? WHERE id=?";
+       echo $sql.$_SESSION['id'];
         // Preparar la declaración
         if ($stmt = $conn->prepare($sql)) {
             // Vincular los parámetros
-            $stmt->bind_param("ssis", $email, $password, $idcurso, $name);
+            $stmt->bind_param("ssiss", $email, $password, $idcurso,$name,$_SESSION['id']);
 
             // Ejecutar la declaración
             if ($stmt->execute()) {
                 echo "Registro actualizado correctamente";
+                header("Location: ./perfil.php");
             } else {
                 echo "Error al actualizar el registro: " . $stmt->error;
             }
