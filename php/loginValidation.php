@@ -28,14 +28,59 @@ if ($user) {
         exit;
     } else {
         // Contraseña incorrecta
-        echo '<script>alert("Contraseña incorrecta. Intenta de nuevo."); window.location = "../login.html";</script>';
+        echo '<!DOCTYPE html>
+        <html lang="zxx">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+        </head>
+        <body>
+            <script>
+                Swal.fire({
+                    icon: "error",
+                    title: "Contraseña incorrecta",
+                    text: "Intenta de nuevo.",
+                    confirmButtonText: "OK"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location = "../login.html";
+                    }
+                });
+            </script>
+        </body>
+        </html>';
         exit;
     }
 } else {
     // Usuario no encontrado
-    echo '<script>alert("Usuario no encontrado. Intenta de nuevo."); window.location = "../login.html";</script>';
+    echo '<!DOCTYPE html>
+    <html lang="zxx">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    </head>
+    <body>
+        <script>
+            Swal.fire({
+                icon: "error",
+                title: "Usuario no encontrado",
+                text: "Intenta de nuevo.",
+                confirmButtonText: "OK"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location = "../login.html";
+                }
+            });
+        </script>
+    </body>
+    </html>';
     exit;
 }
 
 // Cerrar la conexión a la base de datos
 mysqli_close($conexion);
+?>

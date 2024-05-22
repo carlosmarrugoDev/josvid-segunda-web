@@ -120,7 +120,6 @@ session_start();
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay="0.2s">Promoción Black Friday</h1>
                                     <p data-animation="fadeInLeft" data-delay="0.4s">Desarrolle habilidades con cursos, certificados y títulos <br>en línea de universidades y empresas de primer nivel</p>
-                                    <a href="register.html" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Únete gratis</a>
                                 </div>
                             </div>
                         </div>

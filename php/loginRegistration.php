@@ -15,19 +15,57 @@ if (isset($_POST['name'], $_POST['email'], $_POST['password'], $_POST['idcurso']
     if ($ejecutar) {
         // Registro exitoso, redirigir al usuario a la página de inicio de sesión
         echo '
-            <script>
-                alert("Usuario registrado correctamente");
-                window.location = "../login.html";
-            </script>
+            <html>
+            <head>
+                <!-- SweetAlert2 CSS -->
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+                <!-- SweetAlert2 JS -->
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+            </head>
+            <body>
+                <script>
+                    Swal.fire({
+                        icon: "success",
+                        title: "Usuario registrado correctamente",
+                        showConfirmButton: true,
+                        confirmButtonText: "Aceptar"
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location = "../login.html";
+                        }
+                    });
+                </script>
+            </body>
+            </html>
         ';
     } else {
         // Error al registrar el usuario
         echo '
-            <script>
-                alert("Error al registrar el usuario");
-                window.location = "../register.html";
-            </script>
+            <html>
+            <head>
+                <!-- SweetAlert2 CSS -->
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+                <!-- SweetAlert2 JS -->
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+            </head>
+            <body>
+                <script>
+                    Swal.fire({
+                        icon: "error",
+                        title: "Error al registrar el usuario",
+                        showConfirmButton: true,
+                        confirmButtonText: "Intentar de nuevo"
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location = "../register.html";
+                        }
+                    });
+                </script>
+            </body>
+            </html>
         ';
     }
 }
 mysqli_close($conexion);
+?>
+
