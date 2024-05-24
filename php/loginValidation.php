@@ -4,6 +4,7 @@ session_start(); // Iniciar sesión
 // Incluir el archivo de configuración de la base de datos
 include 'database.php';
 
+//Se recuperan los datos enviados desde el formulario de inicio de sesion desde el metodo post
 $email = $_POST['email'];
 $password = $_POST['password'];
 $idcurso = $_POST['idcurso'];

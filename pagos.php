@@ -43,7 +43,7 @@ session_start();
             <!-- Logo -->
             <div class="col-xl-2 col-lg-2">
               <div class="logo">
-                <a href="index.html"><img src="assets/img/logo/logoclass.png" width="150px"></a>
+                <a href="index.php"><img src="assets/img/logo/logo.png" width="150px"></a>
               </div>
             </div>
             <div class="col-xl-10 col-lg-10">
