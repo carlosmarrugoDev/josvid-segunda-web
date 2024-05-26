@@ -221,7 +221,7 @@ session_start();
                                 <div class="properties__caption">
                                     <p>Inge. Carlos Marrugo</p>
                                     <h3><a href="#">Aprende Postgres SQL desde cero</a></h3>
-                                    <p>Este curso está diseñado para llevarte a fundamentos hasta el dominio avanzado de PostgreSQL, sistema de gestión de bases de datos relacional de código abierto más potente disponible.
+                                    <p>Este curso está diseñado para llevarte a fundamentos hasta el dominio avanzado de PostgreSQL, gestión de bases de datos de código abierto.
                                         
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
@@ -338,7 +338,7 @@ session_start();
                                 <div class="properties__caption">
                                     <p>Ing. Carlos Marrugo</p>
                                     <h3><a href="#">Curso de React y Node.js</a></h3>
-                                    <p>Este curso está diseñado para aquellos que desean adquirir habilidades prácticas y profundas en dos de las tecnologías más demandadas y poderosas en el desarrollo web moderno.
+                                    <p>Este curso está diseñado para aquellos que desean adquirir habilidades prácticas y profundas en dos de las tecnologías más poderosas en el desarrollo web moderno.
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
                                         <div class="restaurant-name">
