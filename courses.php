@@ -221,7 +221,7 @@ session_start();
                                 <div class="properties__caption">
                                     <p>Inge. Carlos Marrugo</p>
                                     <h3><a href="#">Aprende Postgres SQL desde cero</a></h3>
-                                    <p>Este curso está diseñado para ayudarte a desarrollar habilidades efectivas de organización y gestión del tiempo, adaptadas para programadores.
+                                    <p>Este curso está diseñado para llevarte a fundamentos hasta el dominio avanzado de PostgreSQL, sistema de gestión de bases de datos relacional de código abierto más potente disponible.
 
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
@@ -260,7 +260,7 @@ session_start();
                                 <div class="properties__caption">
                                     <p>Inge. Carlos Marrugo</p>
                                     <h3><a href="#">Git Bash desde Cero</a></h3>
-                                    <p>Este curso está diseñado para ayudarte a desarrollar habilidades efectivas de organización y gestión del tiempo, adaptadas para programadores.
+                                    <p>Este curso es perfecto para ti. En este curso, te guiaremos paso a paso para que domines Git Bash, desde los conceptos más básicos hasta técnicas avanzadas.
 
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
@@ -299,7 +299,7 @@ session_start();
                                 <div class="properties__caption">
                                     <p>Ing Carlos Marrugo</p>
                                     <h3><a href="#">Curso de PHP - MySQL</a></h3>
-                                    <p>Este curso intensivo de Git y GitHub, aprenderás habilidades fundamentales para gestionar eficazmente el control de versiones de tus proyectos de manera eficiente.</p>
+                                    <p>Nuestro Curso de PHP y MySQL te proporcionará el conocimiento y las herramientas necesarias para crear aplicaciones web dinámicas y funcionales desde cero.</p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
                                         <div class="restaurant-name">
                                             <div class="rating">
