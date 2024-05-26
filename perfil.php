@@ -51,13 +51,6 @@ mysqli_close($conexion);
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
         .container {
             display: flex;
             justify-content: space-around;
@@ -66,14 +59,27 @@ mysqli_close($conexion);
         }
 
         .card {
-
             background-color: #1a1a1a;
             width: 300px;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-left: -500px;
+            margin-bottom: 20px;
+            color: white;
             margin-top: -700px;
+            margin-left: -300px;
+        }
+
+        .info-card {
+            background-color: #1a1a1a;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            color: white;
+            margin-top: -250px;
+            margin-left: 100px;
         }
 
         .profile-picture {
@@ -83,47 +89,40 @@ mysqli_close($conexion);
             margin: 0 auto 20px;
             display: block;
             border: 4px solid #fff;
-            /* añade un borde blanco a la imagen */
-        }
-
-        .user-data {
-            text-align: center;
-            color: white;
-        }
-
-        .user-name {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: white;
-        }
-
-        .user-email {
-            color: #f1f1f1;
-        }
-
-        .info-card {
-            background-color: #1a1a1a;
-            width: 300px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: -700px;
-            margin-left: -800px;
         }
 
         .info-item {
             margin-bottom: 10px;
             color: white;
+            /* Cambia el color de las letras a blanco */
         }
 
         .info-label {
             font-weight: bold;
-            color: white;
         }
 
-        /* Ocultar los botones cuando el usuario ha iniciado sesión */
-        .button-container {
-            display: none;
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* Dos columnas igualmente distribuidas */
+            grid-gap: 20px;
+            /* Espacio entre las imágenes */
+            align-items: flex-start;
+            /* Alinea las imágenes al inicio de cada columna */
+            margin-top: -700px;
+            /* Ajusta el margen superior de las imágenes */
+            margin-left: 200px;
+        }
+
+        .image-container img {
+            width: 100%;
+            /* Ajusta el ancho de las imágenes al 100% del contenedor */
+            height: auto;
+            /* Mantiene la proporción de aspecto */
+            border-radius: 10px;
+            margin-bottom: 20px;
+            /* Espacio entre cada imagen */
+            margin-left: 200px;
         }
     </style>
 </head>
@@ -173,11 +172,11 @@ mysqli_close($conexion);
                                                     </ul>
                                                 </li>
                                                 <?php
-                                          if (!isset($_SESSION['user'])) {
-                                            ?>
-                                          <li class="button-header margin-left "><a href="register.html" class="btn">únete</a></li>
-                                          <li class="button-header"><a href="login.html" class="btn btn3">Iniciar sesión</a></li>
-                                          <?php
+                                                if (!isset($_SESSION['user'])) {
+                                                ?>
+                                                    <li class="button-header margin-left "><a href="register.html" class="btn">únete</a></li>
+                                                    <li class="button-header"><a href="login.html" class="btn btn3">Iniciar sesión</a></li>
+                                                <?php
                                                 }
                                                 ?>
                                             </ul>
@@ -206,33 +205,83 @@ mysqli_close($conexion);
 
             </div>
 
+            <!-- Contenido principal -->
             <main>
                 <!-- Contenido principal -->
                 <div class="container">
-                    <div class="card">
-                        <img src="assets/img/icon/usuario.png" alt="Profile Picture" class="profile-picture">
-                        <div class="user-data">
-                            <p class="user-name"><?php echo $usuario['name']; ?></p>
-                            <p class="user-email"><?php echo $usuario['email']; ?></p>
+                    <div class="user-info">
+                        <div class="card">
+                            <img src="assets/img/icon/usuario.png" alt="Profile Picture" class="profile-picture">
+                            <div class="user-data">
+                                <p class="user-name"><?php echo $usuario['name']; ?></p>
+                                <p class="user-email"><?php echo $usuario['email']; ?></p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-item">
+                                <span class="info-label">Nombre:</span> <?php echo $usuario['name']; ?>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email:</span> <?php echo $usuario['email']; ?>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">ID Curso:</span> <?php echo $usuario['idcurso']; ?>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="info-card">
-                        <div class="info-item">
-                            <span class="info-label">Nombre:</span> <?php echo $usuario['name']; ?>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Email:</span> <?php echo $usuario['email']; ?>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">ID Curso:</span> <?php echo $usuario['idcurso']; ?>
-                        </div>
+                    <div class="image-container">
+                        <?php
+                        $servername = "localhost";
+                        $username = "root";
+                        $password = "";
+                        $dbname = "test";
+
+                        // Creating conexion
+                        $conn = new mysqli($servername, $username, $password, $dbname);
+
+                        // VVerifying conexion
+                        if ($conn->connect_error) {
+                            die("Conexión fallida: " . $conn->connect_error);
+                        }
+
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            $courseName = $_POST['courseName'];
+                            $price = $_POST['price'];
+                            $imageURL = $_POST['imageURL'];
+
+                            // Insertar los datos en la base de datos
+                            $sql = "INSERT INTO usercourses (Id_user,courseName, price, imageURL) VALUES ('" . $_SESSION["id"] . "','$courseName', '$price', '$imageURL')";
+
+                            if ($conn->query($sql) === TRUE) {
+                                echo "Curso adquirido exitosamente";
+                            } else {
+                                echo "Error: " . $sql . "<br>" . $conn->error;
+                            }
+                        }
+                        $sql = "SELECT
+                            `id`,
+                            `Id_user`,
+                            `imageURL`,
+                            `courseName`,
+                            `price`,
+                            `imageURL`
+                          FROM `test`.`usercourses` where Id_user = '" . $_SESSION["id"] . "'";
+                        $result = mysqli_query($conn, $sql);
+
+                        $precio = 0;
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $id_i = $row['id'];
+                            echo '<tr><td class="product-thumbnail"><img src="./' . $row['imageURL'] . '" alt="Image" height="auto" width="200"></td>';
+                        }
+                        // Cerrar la conexión
+                        $conn->close();
+                        ?>
                     </div>
                 </div>
-
-
-
             </main>
+
 
 
         </section>
