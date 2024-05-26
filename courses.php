@@ -3,7 +3,7 @@ session_start();
 ?>
 <!doctype html>
 <html class="no-js" lang="zxx">
-<!-- ya lo hice-->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -222,7 +222,7 @@ session_start();
                                     <p>Inge. Carlos Marrugo</p>
                                     <h3><a href="#">Aprende Postgres SQL desde cero</a></h3>
                                     <p>Este curso está diseñado para llevarte a fundamentos hasta el dominio avanzado de PostgreSQL, sistema de gestión de bases de datos relacional de código abierto más potente disponible.
-
+                                        
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
                                         <div class="restaurant-name">
@@ -261,7 +261,7 @@ session_start();
                                     <p>Inge. Carlos Marrugo</p>
                                     <h3><a href="#">Git Bash desde Cero</a></h3>
                                     <p>Este curso es perfecto para ti. En este curso, te guiaremos paso a paso para que domines Git Bash, desde los conceptos más básicos hasta técnicas avanzadas.
-
+                                        
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
                                         <div class="restaurant-name">
