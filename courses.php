@@ -3,6 +3,7 @@ session_start();
 ?>
 <!doctype html>
 <html class="no-js" lang="zxx">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -30,7 +31,7 @@ session_start();
 </head>
 
 <body>
-    
+
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
@@ -59,35 +60,35 @@ session_start();
                                 <!-- Main-menu -->
                                 <div class="main-menu d-none d-lg-block">
                                     <nav>
-                                        <ul id="navigation">                                                                                          
-                                        <li class="active" ><a href="index.php">Home</a></li>
-                                        <li><a href="courses.php">Cursos</a></li>
-                                          <li><a href="about.php">Acerca</a></li>
-                                          <li><a href="contact.php">Contactanos</a></li>
-                                          <li><a href="pagos.php"><img src="images/icons.png"></a></li>
-                                          <li><a href="#">Perfil</a>
-                                            <ul class="submenu">
-                                                
-                                                <li><a href="perfil.php">Perfil</a></li>
-                                                <li><a href="editarperfil.php"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
-                                                <li><a href="php/cerrarSesion.php"><img src="assets/img/menu/logout.png" width="30px">Salir</a></li>
+                                        <ul id="navigation">
+                                            <li class="active"><a href="index.php">Home</a></li>
+                                            <li><a href="courses.php">Cursos</a></li>
+                                            <li><a href="about.php">Acerca</a></li>
+                                            <li><a href="contact.php">Contactanos</a></li>
+                                            <li><a href="pagos.php"><img src="images/icons.png"></a></li>
+                                            <li><a href="#">Perfil</a>
+                                                <ul class="submenu">
 
-                                            </ul>
-                                        </li>
-                                          <!-- Button -->
-                                          <?php
-                                          if (!isset($_SESSION['user'])) {
+                                                    <li><a href="perfil.php">Perfil</a></li>
+                                                    <li><a href="editarperfil.php"><img src="assets/img/menu/profile.png" width="30px">Editar perfil</a></li>
+                                                    <li><a href="php/cerrarSesion.php"><img src="assets/img/menu/logout.png" width="30px">Salir</a></li>
+
+                                                </ul>
+                                            </li>
+                                            <!-- Button -->
+                                            <?php
+                                            if (!isset($_SESSION['user'])) {
                                             ?>
-                                          <li class="button-header margin-left "><a href="register.html" class="btn">únete</a></li>
-                                          <li class="button-header"><a href="login.html" class="btn btn3">Iniciar sesión</a></li>
-                                          <?php
-                                                }
-                                                ?> 
+                                                <li class="button-header margin-left "><a href="register.html" class="btn">únete</a></li>
+                                                <li class="button-header"><a href="login.html" class="btn btn3">Iniciar sesión</a></li>
+                                            <?php
+                                            }
+                                            ?>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                         <!-- Mobile Menu -->
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>
@@ -113,14 +114,14 @@ session_start();
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                            <li class="breadcrumb-item"><a href="#">Servicios</a></li> 
+                                            <li class="breadcrumb-item"><a href="#">Servicios</a></li>
                                         </ol>
                                     </nav>
                                     <!-- breadcrumb End -->
                                 </div>
                             </div>
                         </div>
-                    </div>          
+                    </div>
                 </div>
             </div>
         </section>
@@ -164,7 +165,7 @@ session_start();
                                     <form action="pagos.php" method="POST">
                                         <input type="hidden" name="courseName" value="Estructura de Datos - Busqueda Binaria">
                                         <input type="hidden" name="price" value="135">
-                                        <input type="hidden" name="imageURL" value="assets/img/gallery/topic7.png">
+                                        <input type="hidden" name="imageURL" value="assets/img/gallery/Busqueda Binaria ED.png">
                                         <!-- Submit button -->
                                         <button type="submit" class="border-btn border-btn2">Adquirir</button>
                                     </form>
@@ -181,8 +182,8 @@ session_start();
                                 <div class="properties__caption">
                                     <p>Ing Carlos Marrugo</p>
                                     <h3><a href="#">Git - Terminal - VSC / Github</a></h3>
-                                    <p>Este curso intensivo de Git y GitHub, aprenderás habilidades fundamentales para gestionar eficazmente el control de versiones de tus proyectos de manera eficiente. 
-                                        
+                                    <p>Este curso intensivo de Git y GitHub, aprenderás habilidades fundamentales para gestionar eficazmente el control de versiones de tus proyectos de manera eficiente.
+
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
                                         <div class="restaurant-name">
@@ -207,7 +208,7 @@ session_start();
                                         <button type="submit" class="border-btn border-btn2">Adquirir</button>
                                     </form>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -215,13 +216,13 @@ session_start();
                         <div class="properties properties2 mb-30" style="background-color: rgba(170, 169, 168);">
                             <div class="properties__card">
                                 <div class="properties__img overlay1">
-                                    <a href="#"><img src="assets/img/gallery/Notion Miniatura.png" alt=""></a>
+                                    <a href="#"><img src="assets/img/gallery/postgressql en visual p1.png" alt=""></a>
                                 </div>
                                 <div class="properties__caption">
                                     <p>Inge. Carlos Marrugo</p>
-                                    <h3><a href="#">Organizarme Como Programador</a></h3>
+                                    <h3><a href="#">Aprende Postgres SQL desde cero</a></h3>
                                     <p>Este curso está diseñado para ayudarte a desarrollar habilidades efectivas de organización y gestión del tiempo, adaptadas para programadores.
-                                        
+
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
                                         <div class="restaurant-name">
@@ -241,12 +242,12 @@ session_start();
                                     <form action="pagos.php" method="POST">
                                         <input type="hidden" name="courseName" value="Organizarme como programador">
                                         <input type="hidden" name="price" value="135">
-                                        <input type="hidden" name="imageURL" value="assets/img/gallery/Git Github miniatura.png">
+                                        <input type="hidden" name="imageURL" value="assets/img/gallery/postgressql en visual p1.png">
                                         <!-- Submit button -->
                                         <button type="submit" class="border-btn border-btn2">Adquirir</button>
                                     </form>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -254,13 +255,13 @@ session_start();
                         <div class="properties properties2 mb-30" style="background-color: rgba(170, 169, 168);">
                             <div class="properties__card">
                                 <div class="properties__img overlay1">
-                                    <a href="#"><img src="assets/img/gallery/Notion Miniatura.png" alt=""></a>
+                                    <a href="#"><img src="assets/img/gallery/Git bush p1.png" alt=""></a>
                                 </div>
                                 <div class="properties__caption">
                                     <p>Inge. Carlos Marrugo</p>
-                                    <h3><a href="#">Organizarme Como Programador</a></h3>
+                                    <h3><a href="#">Git Bash desde Cero</a></h3>
                                     <p>Este curso está diseñado para ayudarte a desarrollar habilidades efectivas de organización y gestión del tiempo, adaptadas para programadores.
-                                        
+
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
                                         <div class="restaurant-name">
@@ -280,12 +281,12 @@ session_start();
                                     <form action="pagos.php" method="POST">
                                         <input type="hidden" name="courseName" value="Work as a programmmer">
                                         <input type="hidden" name="price" value="135">
-                                        <input type="hidden" name="imageURL" value="assets/img/gallery/Git Github miniatura.png">
+                                        <input type="hidden" name="imageURL" value="assets/img/gallery/Git bush p1.png">
                                         <!-- Submit button -->
                                         <button type="submit" class="border-btn border-btn2">Adquirir</button>
                                     </form>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -293,11 +294,11 @@ session_start();
                         <div class="properties properties2 mb-30" style="background-color: rgba(227, 177, 148);">
                             <div class="properties__card">
                                 <div class="properties__img overlay1">
-                                    <a href="#"><img src="assets/img/gallery/Git Github miniatura.png" alt=""></a>
+                                    <a href="#"><img src="assets/img/gallery/login resgiter php.png" alt=""></a>
                                 </div>
                                 <div class="properties__caption">
                                     <p>Ing Carlos Marrugo</p>
-                                    <h3><a href="#">Git - Terminal - VSC / Github</a></h3>
+                                    <h3><a href="#">Curso de PHP - MySQL</a></h3>
                                     <p>Este curso intensivo de Git y GitHub, aprenderás habilidades fundamentales para gestionar eficazmente el control de versiones de tus proyectos de manera eficiente.</p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
                                         <div class="restaurant-name">
@@ -316,27 +317,27 @@ session_start();
                                     </div>
                                     <!-- Course information form -->
                                     <form action="pagos.php" method="POST">
-                                        <input type="hidden" name="courseName" value="Git - Terminal - VSC / Github">
+                                        <input type="hidden" name="courseName" value="Curso de PHP y MySQL">
                                         <input type="hidden" name="price" value="135">
-                                        <input type="hidden" name="imageURL" value="assets/img/gallery/Git Github miniatura.png">
+                                        <input type="hidden" name="imageURL" value="assets/img/gallery/login resgiter php.png">
                                         <!-- Submit button -->
                                         <button type="submit" class="border-btn border-btn2">Adquirir</button>
                                     </form>
                                 </div>
-                                
-                                
+
+
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="properties properties2 mb-30"style="background-color: rgba(170, 169, 168);">
+                        <div class="properties properties2 mb-30" style="background-color: rgba(170, 169, 168);">
                             <div class="properties__card">
                                 <div class="properties__img overlay1">
-                                    <a href="#"><img src="assets/img/gallery/Busqueda Binaria ED.png" alt=""></a>
+                                    <a href="#"><img src="assets/img/gallery/node mini.png" alt=""></a>
                                 </div>
                                 <div class="properties__caption">
                                     <p>Ing. Carlos Marrugo</p>
-                                    <h3><a href="#">Estructura de Datos - Busqueda Binaria</a></h3>
+                                    <h3><a href="#">Curso de React y Node.js</a></h3>
                                     <p>Este curso se enfoca en explorar en detalle la búsqueda binaria y su aplicación en diversas estructuras de datos.
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
@@ -357,7 +358,7 @@ session_start();
                                     <form action="pagos.php" method="POST">
                                         <input type="hidden" name="courseName" value="Busqueda binaria">
                                         <input type="hidden" name="price" value="135">
-                                        <input type="hidden" name="imageURL" value="assets/img/gallery/Git Github miniatura.png">
+                                        <input type="hidden" name="imageURL" value="assets/img/gallery/node mini.png">
                                         <!-- Submit button -->
                                         <button type="submit" class="border-btn border-btn2">Adquirir</button>
                                     </form>
@@ -422,63 +423,63 @@ session_start();
     </main>
     <footer>
         <div class="footer-wrappper footer-bg">
-           <!-- Footer Start-->
-           <div class="footer-area footer-padding">
-               <div class="container">
-                   <div class="row justify-content-between">
-                       <div class="col-xl-4 col-lg-5 col-md-4 col-sm-6">
-                           <div class="single-footer-caption mb-50">
-                               <div class="single-footer-caption mb-30">
-                                   <!-- logo -->
-                                   <div class="footer-logo mb-25">
-                                       <a href="index.php"><img src="assets/img/logo/footer.png" width="225px"></a>
-                                   </div>
-                                   <div class="footer-tittle">
-                                       <div class="footer-pera">
-                                           <p>Disfruta</p>
-                                       </div>
-                                   </div>
-                                   <!-- social -->
-                                   <div class="footer-social">
-                                       <a href="#"><i class="fab fa-twitter"></i></a>
-                                       <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                       <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5">
-                           <div class="single-footer-caption mb-50">
-                               <div class="footer-tittle">
-                                <h4>Soporte</h4>
-                                <ul>
-                                    <li><a href="contact.php">Contactanos= Línea telefónica ó Correo eletrónico</a></li>
-                                </ul>
+            <!-- Footer Start-->
+            <div class="footer-area footer-padding">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-4 col-lg-5 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="single-footer-caption mb-30">
+                                    <!-- logo -->
+                                    <div class="footer-logo mb-25">
+                                        <a href="index.php"><img src="assets/img/logo/footer.png" width="225px"></a>
+                                    </div>
+                                    <div class="footer-tittle">
+                                        <div class="footer-pera">
+                                            <p>Disfruta</p>
+                                        </div>
+                                    </div>
+                                    <!-- social -->
+                                    <div class="footer-social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Soporte</h4>
+                                    <ul>
+                                        <li><a href="contact.php">Contactanos= Línea telefónica ó Correo eletrónico</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Compañia</h4>
+                                    <ul>
+                                        <li><a href="#">Design & creatives</a></li>
+                                        <li><a href="#">Telecommunication</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Compañia</h4>
-                                <ul>
-                                    <li><a href="#">Design & creatives</a></li>
-                                    <li><a href="#">Telecommunication</a></li>
-                                   </ul>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-      </footer> 
-      <!-- Scroll Up -->
-      <div id="back-top" >
+                </div>
+            </div>
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top">
         <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
     </div>
 
     <!-- JS here -->
-    
+
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -502,7 +503,7 @@ session_start();
     <script src="./assets/js/jquery.sticky.js"></script>
     <!-- Progress -->
     <script src="./assets/js/jquery.barfiller.js"></script>
-    
+
     <!-- counter , waypoint,Hover Direction -->
     <script src="./assets/js/jquery.counterup.min.js"></script>
     <script src="./assets/js/waypoints.min.js"></script>
@@ -515,10 +516,11 @@ session_start();
     <script src="./assets/js/jquery.validate.min.js"></script>
     <script src="./assets/js/mail-script.js"></script>
     <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-    
-    <!-- Jquery Plugins, main Jquery -->	
+
+    <!-- Jquery Plugins, main Jquery -->
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
-    
+
 </body>
+
 </html>
