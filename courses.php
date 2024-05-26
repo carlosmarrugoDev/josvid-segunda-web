@@ -4,6 +4,7 @@ session_start();
 <!doctype html>
 <html class="no-js" lang="zxx">
 
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -220,9 +221,9 @@ session_start();
                                 </div>
                                 <div class="properties__caption">
                                     <p>Inge. Carlos Marrugo</p>
-                                    <h3><a href="#">Aprende Postgres SQL desde cero</a></h3>
+                                    <h3><a href="#">Organizarme Como Programador</a></h3>
                                     <p>Este curso está diseñado para ayudarte a desarrollar habilidades efectivas de organización y gestión del tiempo, adaptadas para programadores.
-
+                                        
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
                                         <div class="restaurant-name">
@@ -259,9 +260,9 @@ session_start();
                                 </div>
                                 <div class="properties__caption">
                                     <p>Inge. Carlos Marrugo</p>
-                                    <h3><a href="#">Git Bash desde Cero</a></h3>
+                                    <h3><a href="#">Organizarme Como Programador</a></h3>
                                     <p>Este curso está diseñado para ayudarte a desarrollar habilidades efectivas de organización y gestión del tiempo, adaptadas para programadores.
-
+                                        
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
                                         <div class="restaurant-name">
@@ -298,7 +299,7 @@ session_start();
                                 </div>
                                 <div class="properties__caption">
                                     <p>Ing Carlos Marrugo</p>
-                                    <h3><a href="#">Curso de PHP - MySQL</a></h3>
+                                    <h3><a href="#">Git - Terminal - VSC / Github</a></h3>
                                     <p>Este curso intensivo de Git y GitHub, aprenderás habilidades fundamentales para gestionar eficazmente el control de versiones de tus proyectos de manera eficiente.</p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
                                         <div class="restaurant-name">

@@ -246,12 +246,12 @@ session_start();
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="assets/img/gallery/Notion Miniatura.png" alt=""></a>
+                                <a href="#"><img src="assets/img/gallery/postgressql en visual p1.png" alt=""></a>
                             </div>
                             <div class="properties__caption">
                                 <p>Inge. Carlos Marrugo</p>
-                                    <h3><a href="#">Organizarme Como Programador</a></h3>
-                                    <p>Este curso está diseñado para ayudarte a desarrollar habilidades efectivas de organización y gestión del tiempo, específicamente adaptadas para programadores.
+                                    <h3><a href="#">Aprende Postgres SQL desde cero</a></h3>
+                                    <p>¡Bienvenido al curso "Aprende PostgreSQL desde Cero"! Este curso está diseñado para llevarte desde los fundamentos hasta el dominio avanzado de PostgreSQL, el sistema de gestión de bases de datos relacional de código abierto más potente y robusto disponible en el mercado.
                                         
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
@@ -279,12 +279,12 @@ session_start();
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="assets/img/gallery/Busqueda Binaria ED.png" alt=""></a>
+                                <a href="#"><img src="assets/img/gallery/Git bush p1.png" alt=""></a>
                             </div>
                             <div class="properties__caption">
                                 <p>Ing. Carlos Marrugo</p>
-                                    <h3><a href="#">Estructura de Datos - Busqueda Binaria</a></h3>
-                                    <p>Este curso se enfoca en explorar en detalle la búsqueda binaria y su aplicación en diversas estructuras de datos.
+                                    <h3><a href="#">Git Bash desde Cero</a></h3>
+                                    <p>¿Eres nuevo en el mundo del desarrollo de software y quieres aprender a utilizar Git Bash desde cero? Este curso es perfecto para ti. En este curso, te guiaremos paso a paso para que domines Git Bash, desde los conceptos más básicos hasta técnicas avanzadas.
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
                                         <div class="restaurant-name">
