@@ -338,7 +338,7 @@ session_start();
                                 <div class="properties__caption">
                                     <p>Ing. Carlos Marrugo</p>
                                     <h3><a href="#">Curso de React y Node.js</a></h3>
-                                    <p>Este curso se enfoca en explorar en detalle la búsqueda binaria y su aplicación en diversas estructuras de datos.
+                                    <p>Este curso está diseñado para aquellos que desean adquirir habilidades prácticas y profundas en dos de las tecnologías más demandadas y poderosas en el desarrollo web moderno.
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
                                         <div class="restaurant-name">
