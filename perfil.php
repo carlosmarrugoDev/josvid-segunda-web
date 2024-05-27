@@ -51,6 +51,12 @@ mysqli_close($conexion);
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
+        .user-name{
+            color:#fff;
+        }
+        .user-email{
+            color:#fff;
+        }
         .container {
             display: flex;
             justify-content: space-around;
