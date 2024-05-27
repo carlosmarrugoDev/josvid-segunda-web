@@ -216,12 +216,7 @@ session_start();
         <div class="row">
           <div class="col-md-6">
             <div class="row mb-5">
-              <div class="col-md-6 mb-3 mb-md-0">
-                <a href="pagos.php"><button class="btn btn-black btn-sm btn-block">Actualización de compra</button></a>
-              </div>
-              <div class="col-md-6">
-                <a href="courses.php"><button class="btn btn-outline-black btn-sm btn-block">Continuar comprando</button></a>
-              </div>
+              
             </div>
           </div>
           <div class="col-md-6 pl-5">
