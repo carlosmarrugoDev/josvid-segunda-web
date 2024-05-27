@@ -151,7 +151,7 @@ session_start();
           </span>
           <h2 class="display-3 text-black">¡GRACIAS POR TU COMPRA!</h2>
           <p class="lead mb-5">Tu orden fue completada con éxito</p>
-          <p><a href="courses.html" class="btn btn-sm btn-outline-black">Volver a comprar</a></p>
+          <p><a href="courses.php" class="btn btn-sm btn-outline-black">Volver a comprar</a></p>
         </div>
       </div>
     </div>
