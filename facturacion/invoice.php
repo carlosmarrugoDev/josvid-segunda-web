@@ -12,18 +12,14 @@ $pdf->Image('./img/logo.png',165,12,35,35,'PNG');
 // Encabezado y datos de la empresa
 $pdf->SetFont('Arial','B',16);
 $pdf->SetTextColor(32,100,210);
-$pdf->Cell(150,10,iconv("UTF-8", "ISO-8859-1",strtoupper("Nombre de empresa")),0,0,'L');
+$pdf->Cell(150,10,iconv("UTF-8", "ISO-8859-1",strtoupper("Laviden Academy")),0,0,'L');
 $pdf->Ln(9);
 
 $pdf->SetFont('Arial','',10);
 $pdf->SetTextColor(39,39,51);
-$pdf->Cell(150,9,iconv("UTF-8", "ISO-8859-1","RUC: 0000000000"),0,0,'L');
+$pdf->Cell(150,9,iconv("UTF-8", "ISO-8859-1","Teléfono: 3242076388"),0,0,'L');
 $pdf->Ln(5);
-$pdf->Cell(150,9,iconv("UTF-8", "ISO-8859-1","Dirección: San Salvador, El Salvador"),0,0,'L');
-$pdf->Ln(5);
-$pdf->Cell(150,9,iconv("UTF-8", "ISO-8859-1","Teléfono: 00000000"),0,0,'L');
-$pdf->Ln(5);
-$pdf->Cell(150,9,iconv("UTF-8", "ISO-8859-1","Email: correo@ejemplo.com"),0,0,'L');
+$pdf->Cell(150,9,iconv("UTF-8", "ISO-8859-1","Email: elrprogramadortutoriales@gmail.com"),0,0,'L');
 $pdf->Ln(10);
 
 // Información de la orden
@@ -38,34 +34,14 @@ $pdf->Ln(7);
 
 // Detalles del cliente
 $pdf->SetFont('Arial','',10);
-$pdf->Cell(12,7,iconv("UTF-8", "ISO-8859-1","Cajero:"),0,0,'L');
+$pdf->Cell(12,7,iconv("UTF-8", "ISO-8859-1","CEO - CTO:"),0,0,'L');
 $pdf->SetTextColor(97,97,97);
-$pdf->Cell(134,7,iconv("UTF-8", "ISO-8859-1","Carlos Alfaro"),0,0,'L');
+$pdf->Cell(134,7,iconv("UTF-8", "ISO-8859-1","Lauren Hernadez"),0,0,'L');
 $pdf->SetFont('Arial','B',10);
 $pdf->SetTextColor(97,97,97);
 $pdf->Cell(35,7,iconv("UTF-8", "ISO-8859-1",strtoupper("1")),0,0,'C');
 $pdf->Ln(10);
 
-$pdf->SetFont('Arial','',10);
-$pdf->SetTextColor(39,39,51);
-$pdf->Cell(13,7,iconv("UTF-8", "ISO-8859-1","Cliente:"),0,0);
-$pdf->SetTextColor(97,97,97);
-$pdf->Cell(60,7,iconv("UTF-8", "ISO-8859-1","Carlos Alfaro"),0,0,'L');
-$pdf->SetTextColor(39,39,51);
-$pdf->Cell(8,7,iconv("UTF-8", "ISO-8859-1","Doc: "),0,0,'L');
-$pdf->SetTextColor(97,97,97);
-$pdf->Cell(60,7,iconv("UTF-8", "ISO-8859-1","DNI: 00000000"),0,0,'L');
-$pdf->SetTextColor(39,39,51);
-$pdf->Cell(7,7,iconv("UTF-8", "ISO-8859-1","Tel:"),0,0,'L');
-$pdf->SetTextColor(97,97,97);
-$pdf->Cell(35,7,iconv("UTF-8", "ISO-8859-1","00000000"),0,0);
-$pdf->SetTextColor(39,39,51);
-$pdf->Ln(7);
-$pdf->SetTextColor(39,39,51);
-$pdf->Cell(6,7,iconv("UTF-8", "ISO-8859-1","Dir:"),0,0);
-$pdf->SetTextColor(97,97,97);
-$pdf->Cell(109,7,iconv("UTF-8", "ISO-8859-1","San Salvador, El Salvador, Centro América"),0,0);
-$pdf->Ln(9);
 
 // Tabla de productos
 $pdf->SetFont('Arial','B',10);
@@ -123,10 +99,6 @@ $pdf->Cell($col1_width,7,iconv("UTF-8", "ISO-8859-1","Total Pagado:"),'LTB',0,'R
 $pdf->Cell($col2_width,7,iconv("UTF-8", "ISO-8859-1",$total),'TRB',0,'C');
 $pdf->Ln(7);
 
-// Mostrar el nuevo ítem "Total a pagar"
-$pdf->Cell($col1_width,7,iconv("UTF-8", "ISO-8859-1","Total a Pagar:"),'LTB',0,'R');
-$pdf->Cell($col2_width,7,iconv("UTF-8", "ISO-8859-1",$total),'TRB',0,'C');
-$pdf->Ln(7);
 
 $pdf->Output("I","Factura_Nro_1.pdf",true);
 ?>

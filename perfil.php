@@ -67,7 +67,7 @@ mysqli_close($conexion);
             margin-bottom: 20px;
             color: white;
             margin-top: -700px;
-            margin-left: -300px;
+            margin-left: -200px;
         }
 
         .info-card {
